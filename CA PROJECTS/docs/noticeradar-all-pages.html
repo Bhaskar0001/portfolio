@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NoticeRadar — Complete Platform Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#0a0e1a; --surface:#0f1424; --surface2:#151b2e; --surface3:#1c2440;
+  --border:rgba(255,255,255,0.07); --border2:rgba(255,255,255,0.12);
+  --text:#e8ecf4; --text2:#8b96b0; --text3:#5a6480;
+  --blue:#4f8ef7; --blue-dim:rgba(79,142,247,0.15); --blue-glow:rgba(79,142,247,0.3);
+  --green:#34d399; --green-dim:rgba(52,211,153,0.12);
+  --orange:#fb923c; --orange-dim:rgba(251,146,60,0.12);
+  --purple:#a78bfa; --purple-dim:rgba(167,139,250,0.12);
+  --red:#f87171; --red-dim:rgba(248,113,113,0.12);
+  --gold:#fbbf24; --gold-dim:rgba(251,191,36,0.1);
+  --nav-w:240px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.7;overflow-x:hidden;display:flex;min-height:100vh;}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:var(--surface3);border-radius:3px;}
+
+/* ═══ SIDEBAR NAV ═══ */
+.sidebar{
+  position:fixed;top:0;left:0;bottom:0;width:var(--nav-w);
+  background:var(--surface);border-right:1px solid var(--border2);
+  display:flex;flex-direction:column;z-index:200;
+  overflow-y:auto;
+}
+.sidebar-logo{
+  padding:28px 24px 20px;
+  border-bottom:1px solid var(--border);
+}
+.logo-mark{
+  font-family:'Playfair Display',serif;font-size:22px;font-weight:800;
+  letter-spacing:-0.5px;line-height:1;
+}
+.logo-mark span{color:var(--blue);font-style:italic;}
+.logo-sub{
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  color:var(--text3);letter-spacing:1.5px;margin-top:6px;
+}
+.nav-section-label{
+  font-family:'JetBrains Mono',monospace;font-size:9px;
+  letter-spacing:2px;text-transform:uppercase;color:var(--text3);
+  padding:20px 24px 8px;
+}
+.nav-item{
+  display:flex;align-items:center;gap:12px;
+  padding:10px 20px;margin:1px 8px;border-radius:8px;
+  cursor:pointer;transition:all 0.18s;
+  font-size:13px;font-weight:500;color:var(--text2);
+  border:1px solid transparent;
+  text-decoration:none;
+}
+.nav-item:hover{background:var(--surface2);color:var(--text);border-color:var(--border);}
+.nav-item.active{background:var(--blue-dim);color:var(--blue);border-color:rgba(79,142,247,0.25);}
+.nav-icon{font-size:16px;width:20px;text-align:center;flex-shrink:0;}
+.nav-badge{
+  margin-left:auto;font-family:'JetBrains Mono',monospace;
+  font-size:9px;background:var(--surface3);padding:2px 6px;
+  border-radius:4px;color:var(--text3);
+}
+.sidebar-footer{
+  margin-top:auto;padding:20px 24px;border-top:1px solid var(--border);
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  color:var(--text3);line-height:1.8;
+}
+
+/* ═══ MAIN CONTENT ═══ */
+.main{margin-left:var(--nav-w);flex:1;min-height:100vh;}
+.page{display:none;animation:fadeIn 0.3s ease;}
+.page.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+
+/* ═══ PAGE HEADER ═══ */
+.page-header{
+  padding:56px 64px 40px;border-bottom:1px solid var(--border);
+  background:radial-gradient(ellipse 60% 100% at 80% 50%,var(--blue-dim) 0%,transparent 70%);
+  position:relative;overflow:hidden;
+}
+.page-header.green-glow{background:radial-gradient(ellipse 60% 100% at 80% 50%,var(--green-dim) 0%,transparent 70%);}
+.page-header.gold-glow{background:radial-gradient(ellipse 60% 100% at 80% 50%,var(--gold-dim) 0%,transparent 70%);}
+.page-header.purple-glow{background:radial-gradient(ellipse 60% 100% at 80% 50%,var(--purple-dim) 0%,transparent 70%);}
+.page-header.orange-glow{background:radial-gradient(ellipse 60% 100% at 80% 50%,var(--orange-dim) 0%,transparent 70%);}
+.page-header.red-glow{background:radial-gradient(ellipse 60% 100% at 80% 50%,var(--red-dim) 0%,transparent 70%);}
+.header-grid{
+  position:absolute;inset:0;
+  background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);
+  background-size:40px 40px;
+  mask-image:linear-gradient(90deg,transparent 0%,black 40%,transparent 100%);
+  opacity:0.5;
+}
+.eyebrow{
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  letter-spacing:2.5px;text-transform:uppercase;color:var(--blue);
+  margin-bottom:12px;display:flex;align-items:center;gap:10px;position:relative;
+}
+.eyebrow.green{color:var(--green);}
+.eyebrow.gold{color:var(--gold);}
+.eyebrow.purple{color:var(--purple);}
+.eyebrow.orange{color:var(--orange);}
+.eyebrow.red{color:var(--red);}
+.eyebrow::before{content:'';width:20px;height:1px;background:currentColor;}
+.page-title{
+  font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,52px);
+  font-weight:800;line-height:1.1;letter-spacing:-1px;position:relative;
+}
+.page-title em{font-style:italic;color:var(--blue);}
+.page-desc{margin-top:12px;color:var(--text2);max-width:580px;font-size:15px;position:relative;}
+
+/* ═══ CONTENT AREA ═══ */
+.content{padding:48px 64px 80px;max-width:1000px;}
+
+/* ═══ SHARED COMPONENTS ═══ */
+h2{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;margin-bottom:20px;line-height:1.2;}
+h3{font-size:17px;font-weight:700;margin-bottom:10px;}
+p{color:var(--text2);margin-bottom:16px;line-height:1.7;}
+strong{color:var(--text);}
+
+.section-divider{margin:48px 0 32px;border:none;border-top:1px solid var(--border);}
+
+.card{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:24px;transition:all 0.2s;}
+.card:hover{border-color:var(--border2);box-shadow:0 8px 30px rgba(0,0,0,0.3);}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.grid-auto{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;}
+
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;
+  font-weight:500;padding:3px 9px;border-radius:5px;letter-spacing:0.5px;}
+.tag-blue{background:var(--blue-dim);color:var(--blue);}
+.tag-green{background:var(--green-dim);color:var(--green);}
+.tag-orange{background:var(--orange-dim);color:var(--orange);}
+.tag-purple{background:var(--purple-dim);color:var(--purple);}
+.tag-red{background:var(--red-dim);color:var(--red);}
+.tag-gold{background:var(--gold-dim);color:var(--gold);}
+
+.callout{border-radius:14px;padding:20px 24px;display:flex;gap:14px;align-items:flex-start;margin:24px 0;}
+.callout.info{background:var(--blue-dim);border:1px solid rgba(79,142,247,0.2);}
+.callout.green{background:var(--green-dim);border:1px solid rgba(52,211,153,0.2);}
+.callout.warn{background:var(--gold-dim);border:1px solid rgba(251,191,36,0.2);}
+.callout-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.callout-title{font-size:14px;font-weight:700;margin-bottom:4px;}
+.callout.info .callout-title{color:var(--blue);}
+.callout.green .callout-title{color:var(--green);}
+.callout.warn .callout-title{color:var(--gold);}
+.callout-body{font-size:13px;color:var(--text2);margin:0;line-height:1.55;}
+
+.stat-row{display:flex;gap:0;background:var(--surface2);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin:24px 0;}
+.stat-box{flex:1;padding:24px;text-align:center;border-right:1px solid var(--border);}
+.stat-box:last-child{border-right:none;}
+.stat-num{font-family:'Playfair Display',serif;font-size:38px;font-weight:700;color:var(--text);line-height:1;}
+.stat-lbl{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-top:6px;}
+
+.diagram-wrap{background:var(--surface);border:1px solid var(--border2);border-radius:18px;padding:36px;margin:24px 0;position:relative;overflow:hidden;}
+.diagram-wrap::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--purple),var(--green),var(--gold));}
+.diagram-caption{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:24px;}
+
+/* ═══ MOBILE TOGGLE ═══ */
+.mob-toggle{display:none;position:fixed;top:16px;left:16px;z-index:300;background:var(--surface);border:1px solid var(--border2);border-radius:8px;padding:10px;cursor:pointer;font-size:18px;}
+.sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:150;}
+
+@media(max-width:900px){
+  .sidebar{transform:translateX(-100%);transition:transform 0.3s;}
+  .sidebar.open{transform:translateX(0);}
+  .sidebar-overlay.open{display:block;}
+  .main{margin-left:0;}
+  .mob-toggle{display:flex;}
+  .page-header,.content{padding-left:24px;padding-right:24px;}
+  .grid-2,.grid-3{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<button class="mob-toggle" onclick="toggleSidebar()">☰</button>
+<div class="sidebar-overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+<!-- ══════════════════ SIDEBAR ══════════════════ -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-mark">Notice<span>Radar</span></div>
+    <div class="logo-sub">Platform Docs v1.0</div>
+  </div>
+
+  <div class="nav-section-label">Navigation</div>
+
+  <a class="nav-item active" data-page="overview" onclick="go('overview')">
+    <span class="nav-icon">🏠</span> Overview
+  </a>
+  <a class="nav-item" data-page="architecture" onclick="go('architecture')">
+    <span class="nav-icon">🏗️</span> Architecture
+  </a>
+  <a class="nav-item" data-page="tech" onclick="go('tech')">
+    <span class="nav-icon">⚙️</span> Tech Stack
+    <span class="nav-badge">20+</span>
+  </a>
+  <a class="nav-item" data-page="features" onclick="go('features')">
+    <span class="nav-icon">✨</span> Features
+    <span class="nav-badge">19</span>
+  </a>
+  <a class="nav-item" data-page="dataflow" onclick="go('dataflow')">
+    <span class="nav-icon">🔄</span> Data Flow
+  </a>
+  <a class="nav-item" data-page="security" onclick="go('security')">
+    <span class="nav-icon">🛡️</span> Security
+    <span class="nav-badge">8</span>
+  </a>
+  <a class="nav-item" data-page="structure" onclick="go('structure')">
+    <span class="nav-icon">📁</span> Structure
+  </a>
+
+  <div class="sidebar-footer">
+    NoticeRadar · v1.0<br>
+    Confidential · Internal Use
+  </div>
+</aside>
+
+<!-- ══════════════════ MAIN ══════════════════ -->
+<main class="main">
+
+<!-- ╔══════════════════════════════════════╗ -->
+<!-- ║          PAGE: OVERVIEW              ║ -->
+<!-- ╚══════════════════════════════════════╝ -->
+<div class="page active" id="page-overview">
+  <div class="page-header">
+    <div class="header-grid"></div>
+    <div class="eyebrow">01 — Overview</div>
+    <h1 class="page-title">What is <em>NoticeRadar</em>?</h1>
+    <p class="page-desc">A specialized, secure web application for Chartered Accountants that automates the entire lifecycle of government tax notices — from fetching to final response.</p>
+  </div>
+  <div class="content">
+
+    <div class="stat-row">
+      <div class="stat-box"><div class="stat-num">19</div><div class="stat-lbl">Core Features</div></div>
+      <div class="stat-box"><div class="stat-num">5</div><div class="stat-lbl">Feature Zones</div></div>
+      <div class="stat-box"><div class="stat-num">8</div><div class="stat-lbl">Security Layers</div></div>
+      <div class="stat-box"><div class="stat-num">3</div><div class="stat-lbl">User Roles</div></div>
+      <div class="stat-box"><div class="stat-num">13</div><div class="stat-lbl">Lifecycle Steps</div></div>
+    </div>
+
+    <div class="grid-2" style="margin-bottom:24px">
+      <div class="card" style="border-color:rgba(248,113,113,0.25);background:var(--red-dim)">
+        <div style="font-size:28px;margin-bottom:14px">😩</div>
+        <h3 style="color:var(--red)">The Problem CAs Face</h3>
+        <p style="margin-bottom:12px">Managing hundreds of clients, each with notices from multiple government portals (IT, GST) is chaotic and time-consuming:</p>
+        <ul style="padding-left:18px;color:var(--text2)">
+          <li style="margin-bottom:6px;font-size:13px">Constantly log into different client portals manually</li>
+          <li style="margin-bottom:6px;font-size:13px">Read complex 10-page legal notices</li>
+          <li style="margin-bottom:6px;font-size:13px">Chase clients over email for required documents</li>
+          <li style="margin-bottom:6px;font-size:13px">Draft legally formatted replies under strict deadlines</li>
+          <li style="margin-bottom:6px;font-size:13px">Submit responses and track resolution status</li>
+          <li style="font-size:13px">Risk missing deadlines → penalties for clients</li>
+        </ul>
+      </div>
+      <div class="card" style="border-color:rgba(52,211,153,0.25);background:var(--green-dim)">
+        <div style="font-size:28px;margin-bottom:14px">🎯</div>
+        <h3 style="color:var(--green)">The NoticeRadar Solution</h3>
+        <p style="margin-bottom:12px">NoticeRadar automates the entire compliance lifecycle end-to-end:</p>
+        <ul style="padding-left:18px;color:var(--text2)">
+          <li style="margin-bottom:6px;font-size:13px">Automatically fetches notices from government portals (RPA)</li>
+          <li style="margin-bottom:6px;font-size:13px">AI summarizes complex legal documents in seconds</li>
+          <li style="margin-bottom:6px;font-size:13px">Secure client portal for document uploads</li>
+          <li style="margin-bottom:6px;font-size:13px">AI drafts legally formatted response letters</li>
+          <li style="margin-bottom:6px;font-size:13px">Interactive calendar tracks all deadlines visually</li>
+          <li style="font-size:13px">Full forensic audit trail for compliance evidence</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="section-divider">
+    <h2>Who Uses NoticeRadar?</h2>
+    <div class="grid-3">
+      <div class="card" style="border-left:3px solid var(--red)">
+        <div style="font-size:30px;margin-bottom:12px">⚡</div>
+        <h3>Super Admin</h3>
+        <p style="font-size:13px">Full access to everything. Manages users, views all clients and notices, accesses forensic audit logs, configures firm settings, and manages templates and billing.</p>
+        <span class="tag tag-red">Full Access</span>
+      </div>
+      <div class="card" style="border-left:3px solid var(--blue)">
+        <div style="font-size:30px;margin-bottom:12px">👤</div>
+        <h3>CA Staff Member</h3>
+        <p style="font-size:13px">Sees only notices assigned to them. Can create action requests, chat with clients, use the AI response studio, and mark notices resolved. Cannot see other staff's work.</p>
+        <span class="tag tag-blue">Scoped Access</span>
+      </div>
+      <div class="card" style="border-left:3px solid var(--green)">
+        <div style="font-size:30px;margin-bottom:12px">📁</div>
+        <h3>Tax Client</h3>
+        <p style="font-size:13px">Separate simplified portal. Sees only their own notices and pending document requests. Can upload files and chat with their CA. No access to the CA's internal dashboard.</p>
+        <span class="tag tag-green">Client Portal Only</span>
+      </div>
+    </div>
+
+    <hr class="section-divider">
+    <h2>The Core Workflow — At a Glance</h2>
+    <div class="diagram-wrap">
+      <div class="diagram-caption">Fig — End-to-End Notice Lifecycle Overview</div>
+      <svg viewBox="0 0 860 110" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+            <polygon points="0 0,8 3,0 6" fill="rgba(139,150,176,0.6)"/>
+          </marker>
+        </defs>
+        <!-- Steps -->
+        <g>
+          <rect x="10" y="30" width="110" height="50" rx="8" fill="rgba(167,139,250,0.12)" stroke="rgba(167,139,250,0.4)" stroke-width="1.5"/>
+          <text x="65" y="52" text-anchor="middle" font-size="18">🏛️</text>
+          <text x="65" y="70" text-anchor="middle" fill="#e8ecf4" font-family="Plus Jakarta Sans,sans-serif" font-size="11" font-weight="600">Gov Portal</text>
+          <text x="65" y="85" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="9">fetched</text>
+        </g>
+        <line x1="120" y1="55" x2="148" y2="55" stroke="rgba(139,150,176,0.4)" stroke-width="1.5" marker-end="url(#arr)"/>
+        <g>
+          <rect x="150" y="30" width="110" height="50" rx="8" fill="rgba(79,142,247,0.12)" stroke="rgba(79,142,247,0.35)" stroke-width="1.5"/>
+          <text x="205" y="52" text-anchor="middle" font-size="18">📥</text>
+          <text x="205" y="70" text-anchor="middle" fill="#e8ecf4" font-family="Plus Jakarta Sans,sans-serif" font-size="11" font-weight="600">Inbox</text>
+          <text x="205" y="85" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="9">sorted by urgency</text>
+        </g>
+        <line x1="260" y1="55" x2="288" y2="55" stroke="rgba(139,150,176,0.4)" stroke-width="1.5" marker-end="url(#arr)"/>
+        <g>
+          <rect x="290" y="30" width="110" height="50" rx="8" fill="rgba(251,146,60,0.1)" stroke="rgba(251,146,60,0.35)" stroke-width="1.5"/>
+          <text x="345" y="52" text-anchor="middle" font-size="18">🤖</text>
+          <text x="345" y="70" text-anchor="middle" fill="#e8ecf4" font-family="Plus Jakarta Sans,sans-serif" font-size="11" font-weight="600">AI Summary</text>
+          <text x="345" y="85" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="9">3 bullet points</text>
+        </g>
+        <line x1="400" y1="55" x2="428" y2="55" stroke="rgba(139,150,176,0.4)" stroke-width="1.5" marker-end="url(#arr)"/>
+        <g>
+          <rect x="430" y="30" width="110" height="50" rx="8" fill="rgba(52,211,153,0.1)" stroke="rgba(52,211,153,0.35)" stroke-width="1.5"/>
+          <text x="485" y="52" text-anchor="middle" font-size="18">📤</text>
+          <text x="485" y="70" text-anchor="middle" fill="#e8ecf4" font-family="Plus Jakarta Sans,sans-serif" font-size="11" font-weight="600">Client Upload</text>
+          <text x="485" y="85" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="9">secure docs</text>
+        </g>
+        <line x1="540" y1="55" x2="568" y2="55" stroke="rgba(139,150,176,0.4)" stroke-width="1.5" marker-end="url(#arr)"/>
+        <g>
+          <rect x="570" y="30" width="110" height="50" rx="8" fill="rgba(251,191,36,0.1)" stroke="rgba(251,191,36,0.35)" stroke-width="1.5"/>
+          <text x="625" y="52" text-anchor="middle" font-size="18">✍️</text>
+          <text x="625" y="70" text-anchor="middle" fill="#e8ecf4" font-family="Plus Jakarta Sans,sans-serif" font-size="11" font-weight="600">AI Draft</text>
+          <text x="625" y="85" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="9">legal reply</text>
+        </g>
+        <line x1="680" y1="55" x2="708" y2="55" stroke="rgba(139,150,176,0.4)" stroke-width="1.5" marker-end="url(#arr)"/>
+        <g>
+          <rect x="710" y="30" width="110" height="50" rx="8" fill="rgba(248,113,113,0.1)" stroke="rgba(248,113,113,0.35)" stroke-width="1.5"/>
+          <text x="765" y="52" text-anchor="middle" font-size="18">✅</text>
+          <text x="765" y="70" text-anchor="middle" fill="#e8ecf4" font-family="Plus Jakarta Sans,sans-serif" font-size="11" font-weight="600">Resolved</text>
+          <text x="765" y="85" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="9">audit logged</text>
+        </g>
+        <!-- Step numbers -->
+        <text x="65" y="20" text-anchor="middle" fill="rgba(139,150,176,0.3)" font-family="JetBrains Mono,monospace" font-size="9">STEP 1</text>
+        <text x="205" y="20" text-anchor="middle" fill="rgba(139,150,176,0.3)" font-family="JetBrains Mono,monospace" font-size="9">STEP 2</text>
+        <text x="345" y="20" text-anchor="middle" fill="rgba(139,150,176,0.3)" font-family="JetBrains Mono,monospace" font-size="9">STEP 3</text>
+        <text x="485" y="20" text-anchor="middle" fill="rgba(139,150,176,0.3)" font-family="JetBrains Mono,monospace" font-size="9">STEP 4</text>
+        <text x="625" y="20" text-anchor="middle" fill="rgba(139,150,176,0.3)" font-family="JetBrains Mono,monospace" font-size="9">STEP 5</text>
+        <text x="765" y="20" text-anchor="middle" fill="rgba(139,150,176,0.3)" font-family="JetBrains Mono,monospace" font-size="9">STEP 6</text>
+      </svg>
+    </div>
+
+    <div class="callout info">
+      <span class="callout-icon">💡</span>
+      <div>
+        <div class="callout-title">Built for non-technical users too</div>
+        <p class="callout-body">The Tax Client portal is intentionally simple — clients see plain language requests like "Please upload your Form 16." There is no jargon, no complex UI, no training required. CAs can onboard clients in minutes.</p>
+      </div>
+    </div>
+
+    <hr class="section-divider">
+    <h2>Quick Navigation</h2>
+    <div class="grid-2">
+      <div class="card" style="cursor:pointer" onclick="go('architecture')">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+          <span style="font-size:22px">🏗️</span>
+          <h3 style="margin:0">System Architecture</h3>
+        </div>
+        <p style="font-size:13px;margin:0">See how all components — server, database, AI, storage, and users — connect together.</p>
+      </div>
+      <div class="card" style="cursor:pointer" onclick="go('features')">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+          <span style="font-size:22px">✨</span>
+          <h3 style="margin:0">All 19 Features</h3>
+        </div>
+        <p style="font-size:13px;margin:0">Full descriptions of every feature across 5 functional zones with real use-case examples.</p>
+      </div>
+      <div class="card" style="cursor:pointer" onclick="go('security')">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+          <span style="font-size:22px">🛡️</span>
+          <h3 style="margin:0">Security Layers</h3>
+        </div>
+        <p style="font-size:13px;margin:0">8 enterprise security measures protecting PAN data, credentials, and financial documents.</p>
+      </div>
+      <div class="card" style="cursor:pointer" onclick="go('dataflow')">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+          <span style="font-size:22px">🔄</span>
+          <h3 style="margin:0">Data Flow</h3>
+        </div>
+        <p style="font-size:13px;margin:0">Step-by-step: exactly how a notice enters, flows through, and is resolved in NoticeRadar.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ╔══════════════════════════════════════╗ -->
+<!-- ║        PAGE: ARCHITECTURE           ║ -->
+<!-- ╚══════════════════════════════════════╝ -->
+<div class="page" id="page-architecture">
+  <div class="page-header green-glow">
+    <div class="header-grid"></div>
+    <div class="eyebrow green">02 — Architecture</div>
+    <h1 class="page-title">System <em>Architecture</em></h1>
+    <p class="page-desc">How all the different pieces of NoticeRadar connect — from external government portals to user interfaces.</p>
+  </div>
+  <div class="content">
+
+    <div class="diagram-wrap">
+      <div class="diagram-caption">Fig 1.0 — High-Level System Architecture Block Diagram</div>
+      <svg viewBox="0 0 860 500" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">
+        <defs>
+          <marker id="aw2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="rgba(139,150,176,0.6)"/></marker>
+          <marker id="ab2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#4f8ef7"/></marker>
+          <marker id="ag2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#34d399"/></marker>
+          <marker id="aor2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#fb923c"/></marker>
+          <marker id="apu2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#a78bfa"/></marker>
+        </defs>
+
+        <!-- GOV PORTAL -->
+        <rect x="20" y="40" width="165" height="80" rx="8" fill="rgba(167,139,250,0.08)" stroke="rgba(167,139,250,0.4)" stroke-width="1.5"/>
+        <text x="102" y="68" text-anchor="middle" fill="rgba(167,139,250,0.6)" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="2">EXTERNAL</text>
+        <text x="102" y="92" text-anchor="middle" fill="#e8ecf4" font-family="Plus Jakarta Sans,sans-serif" font-size="14" font-weight="700">Gov IT / GST</text>
+        <text x="102" y="110" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="9">incometax.gov.in</text>
+
+        <!-- BACKEND SERVER (CENTER) -->
+        <rect x="335" y="180" width="200" height="110" rx="12" fill="rgba(79,142,247,0.1)" stroke="#4f8ef7" stroke-width="2"/>
+        <text x="435" y="212" text-anchor="middle" fill="rgba(79,142,247,0.6)" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="2">BACKEND</text>
+        <text x="435" y="237" text-anchor="middle" fill="#e8ecf4" font-family="Plus Jakarta Sans,sans-serif" font-size="19" font-weight="800">Server</text>
+        <text x="435" y="258" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="9">Node.js + Express.js</text>
+        <text x="435" y="275" text-anchor="middle" fill="rgba(139,150,176,0.4)" font-family="JetBrains Mono,monospace" font-size="8">JWT · Mongoose · Multer · Zod</text>
+
+        <!-- MONGODB -->
+        <rect x="160" y="370" width="165" height="80" rx="8" fill="rgba(52,211,153,0.08)" stroke="rgba(52,211,153,0.4)" stroke-width="1.5"/>
+        <text x="242" y="398" text-anchor="middle" fill="rgba(52,211,153,0.6)" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="2">DATABASE</text>
+        <text x="242" y="422" text-anchor="middle" fill="#e8ecf4" font-family="Plus Jakarta Sans,sans-serif" font-size="14" font-weight="700">MongoDB</text>
+        <text x="242" y="440" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="9">Users · Notices · Logs</text>
+
+        <!-- AI ENGINE -->
+        <rect x="680" y="140" width="170" height="80" rx="8" fill="rgba(251,146,60,0.08)" stroke="rgba(251,146,60,0.4)" stroke-width="1.5"/>
+        <text x="765" y="168" text-anchor="middle" fill="rgba(251,146,60,0.6)" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="2">AI ENGINE</text>
+        <text x="765" y="192" text-anchor="middle" fill="#e8ecf4" font-family="Plus Jakarta Sans,sans-serif" font-size="14" font-weight="700">AI / OCR</text>
+        <text x="765" y="210" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="9">Summarize · Draft · Extract</text>
+
+        <!-- AWS S3 -->
+        <rect x="680" y="270" width="170" height="80" rx="8" fill="rgba(251,191,36,0.08)" stroke="rgba(251,191,36,0.4)" stroke-width="1.5"/>
+        <text x="765" y="298" text-anchor="middle" fill="rgba(251,191,36,0.6)" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="2">STORAGE</text>
+        <text x="765" y="322" text-anchor="middle" fill="#e8ecf4" font-family="Plus Jakarta Sans,sans-serif" font-size="14" font-weight="700">AWS S3 / MinIO</text>
+        <text x="765" y="340" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="9">Encrypted PDFs · Files</text>
+
+        <!-- CA USER -->
+        <rect x="20" y="380" width="120" height="70" rx="8" fill="rgba(79,142,247,0.08)" stroke="rgba(79,142,247,0.4)" stroke-width="1.5"/>
+        <text x="80" y="405" text-anchor="middle" font-size="20">👤</text>
+        <text x="80" y="428" text-anchor="middle" fill="#e8ecf4" font-family="Plus Jakarta Sans,sans-serif" font-size="12" font-weight="700">CA / Admin</text>
+        <text x="80" y="443" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="8">Web Dashboard</text>
+
+        <!-- CLIENT USER -->
+        <rect x="400" y="390" width="120" height="70" rx="8" fill="rgba(251,146,60,0.08)" stroke="rgba(251,146,60,0.4)" stroke-width="1.5"/>
+        <text x="460" y="415" text-anchor="middle" font-size="20">👥</text>
+        <text x="460" y="438" text-anchor="middle" fill="#e8ecf4" font-family="Plus Jakarta Sans,sans-serif" font-size="12" font-weight="700">Tax Client</text>
+        <text x="460" y="453" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="8">Client Portal</text>
+
+        <!-- CONNECTIONS -->
+        <path d="M185,80 Q310,80 333,210" fill="none" stroke="rgba(167,139,250,0.5)" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#apu2)"/>
+        <rect x="220" y="100" width="90" height="16" rx="4" fill="#0a0e1a"/><text x="265" y="112" text-anchor="middle" fill="rgba(167,139,250,0.7)" font-family="JetBrains Mono,monospace" font-size="9">auto-sync RPA</text>
+
+        <line x1="380" y1="290" x2="286" y2="368" stroke="rgba(52,211,153,0.4)" stroke-width="1.5" marker-end="url(#ag2)"/>
+        <line x1="283" y1="365" x2="383" y2="288" stroke="rgba(52,211,153,0.4)" stroke-width="1.5" marker-end="url(#ag2)"/>
+        <text x="310" y="335" fill="rgba(52,211,153,0.5)" font-family="JetBrains Mono,monospace" font-size="8" transform="rotate(-35,310,335)">read/write</text>
+
+        <line x1="535" y1="215" x2="678" y2="190" stroke="rgba(251,146,60,0.4)" stroke-width="1.5" marker-end="url(#aor2)"/>
+        <line x1="678" y1="193" x2="535" y2="218" stroke="rgba(251,146,60,0.4)" stroke-width="1.5" marker-end="url(#aor2)"/>
+        <text x="610" y="195" text-anchor="middle" fill="rgba(251,146,60,0.5)" font-family="JetBrains Mono,monospace" font-size="8">AI calls</text>
+
+        <line x1="535" y1="250" x2="678" y2="300" stroke="rgba(251,191,36,0.4)" stroke-width="1.5" marker-end="url(#aw2)"/>
+        <line x1="678" y1="303" x2="535" y2="253" stroke="rgba(251,191,36,0.4)" stroke-width="1.5" marker-end="url(#aw2)"/>
+        <text x="618" y="300" text-anchor="middle" fill="rgba(251,191,36,0.5)" font-family="JetBrains Mono,monospace" font-size="8">file vault</text>
+
+        <path d="M140,385 Q240,320 333,235" fill="none" stroke="rgba(79,142,247,0.5)" stroke-width="1.5" marker-end="url(#ab2)"/>
+        <path d="M335,237 Q243,322 142,387" fill="none" stroke="rgba(79,142,247,0.5)" stroke-width="1.5" marker-end="url(#ab2)"/>
+        <text x="215" y="295" fill="rgba(79,142,247,0.5)" font-family="JetBrains Mono,monospace" font-size="8" transform="rotate(-32,215,295)">manage</text>
+
+        <line x1="460" y1="390" x2="458" y2="292" stroke="rgba(251,146,60,0.5)" stroke-width="1.5" marker-end="url(#aor2)"/>
+        <line x1="462" y1="292" x2="464" y2="390" stroke="rgba(251,146,60,0.5)" stroke-width="1.5" marker-end="url(#aor2)"/>
+        <text x="480" y="345" fill="rgba(251,146,60,0.5)" font-family="JetBrains Mono,monospace" font-size="8">upload</text>
+
+        <!-- Legend bar -->
+        <rect x="20" y="468" width="820" height="24" rx="5" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+        <circle cx="45" cy="480" r="4" fill="rgba(167,139,250,0.6)"/><text x="56" y="484" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="9">Gov</text>
+        <circle cx="110" cy="480" r="4" fill="rgba(79,142,247,0.7)"/><text x="121" y="484" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="9">Backend</text>
+        <circle cx="200" cy="480" r="4" fill="rgba(52,211,153,0.7)"/><text x="211" y="484" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="9">Database</text>
+        <circle cx="300" cy="480" r="4" fill="rgba(251,146,60,0.7)"/><text x="311" y="484" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="9">AI / Client</text>
+        <circle cx="400" cy="480" r="4" fill="rgba(251,191,36,0.7)"/><text x="411" y="484" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="9">Storage</text>
+        <line x1="490" y1="480" x2="510" y2="480" stroke="rgba(139,150,176,0.4)" stroke-width="1.5" stroke-dasharray="4,2"/><text x="518" y="484" fill="rgba(139,150,176,0.4)" font-family="JetBrains Mono,monospace" font-size="9">dashed = async</text>
+        <line x1="650" y1="480" x2="670" y2="480" stroke="rgba(139,150,176,0.4)" stroke-width="1.5"/><text x="678" y="484" fill="rgba(139,150,176,0.4)" font-family="JetBrains Mono,monospace" font-size="9">solid = real-time</text>
+      </svg>
+    </div>
+
+    <hr class="section-divider">
+    <h2>The Four System Zones</h2>
+    <div class="grid-2">
+      <div class="card" style="border-left:3px solid var(--purple)">
+        <h3 style="color:var(--purple)">🏛️ External World</h3>
+        <p style="font-size:13px">The Government Income Tax Department portal and GST portal. These are third-party systems that NoticeRadar connects to via automated RPA scripts — logging in, checking for new notices, and downloading PDFs. NoticeRadar never controls these portals, it only reads from them.</p>
+      </div>
+      <div class="card" style="border-left:3px solid var(--blue)">
+        <h3 style="color:var(--blue)">🖥️ NoticeRadar Backend</h3>
+        <p style="font-size:13px">The core brain running on Node.js + Express. Handles all business logic, enforces security (JWT auth, rate limiting, CORS), talks to MongoDB, calls AI APIs, and manages file storage. Every request from both users passes through this server.</p>
+      </div>
+      <div class="card" style="border-left:3px solid var(--green)">
+        <h3 style="color:var(--green)">🗄️ Data & Storage Layer</h3>
+        <p style="font-size:13px"><strong>MongoDB</strong> stores all structured data (users, notices, chats, audit logs) as flexible JSON documents. <strong>AWS S3/MinIO</strong> stores all actual files (PDFs, images). These two systems together form the persistent memory of NoticeRadar.</p>
+      </div>
+      <div class="card" style="border-left:3px solid var(--orange)">
+        <h3 style="color:var(--orange)">👥 Users</h3>
+        <p style="font-size:13px">Two completely separate frontend interfaces. The <strong>CA Dashboard</strong> (full-featured React app) for staff and admins. The <strong>Client Portal</strong> (simplified interface) for Tax Clients. Both communicate with the same backend server via authenticated HTTPS API calls.</p>
+      </div>
+    </div>
+
+    <hr class="section-divider">
+    <h2>Data Flows — What Goes Where</h2>
+    <div style="display:flex;flex-direction:column;gap:12px;margin-top:16px">
+      <div class="card" style="display:flex;align-items:flex-start;gap:16px">
+        <div style="background:var(--purple-dim);border-radius:8px;padding:10px;font-size:18px;flex-shrink:0">🔁</div>
+        <div><h3 style="font-size:14px;margin-bottom:4px">Gov Portal → Server (Async, Nightly)</h3><p style="font-size:13px;margin:0">The RPA automation script runs on a schedule. It uses stored, encrypted credentials to log into government portals, scrapes the notice list, downloads new PDFs, extracts metadata (Notice #, PAN, Assessment Year, Due Date), and saves to MongoDB. This happens without any human intervention.</p></div>
+      </div>
+      <div class="card" style="display:flex;align-items:flex-start;gap:16px">
+        <div style="background:var(--blue-dim);border-radius:8px;padding:10px;font-size:18px;flex-shrink:0">↔️</div>
+        <div><h3 style="font-size:14px;margin-bottom:4px">Server ↔ MongoDB (Real-time, Bidirectional)</h3><p style="font-size:13px;margin:0">Every CA action — viewing a notice, creating an action request, adding a comment — triggers a read or write to MongoDB via Mongoose. The data is structured according to strict schemas (Notice.js, User.js, AuditLog.js) before it is ever saved.</p></div>
+      </div>
+      <div class="card" style="display:flex;align-items:flex-start;gap:16px">
+        <div style="background:var(--orange-dim);border-radius:8px;padding:10px;font-size:18px;flex-shrink:0">🧠</div>
+        <div><h3 style="font-size:14px;margin-bottom:4px">Server ↔ AI Engine (On-demand)</h3><p style="font-size:13px;margin:0">When a CA opens the Notice Drawer, the server sends the raw notice text to the AI API. When the CA opens Response Studio, the server sends notice context + documents. The AI returns summaries or draft letters. These calls are made on-demand, not continuously.</p></div>
+      </div>
+      <div class="card" style="display:flex;align-items:flex-start;gap:16px">
+        <div style="background:var(--gold-dim);border-radius:8px;padding:10px;font-size:18px;flex-shrink:0">🗂️</div>
+        <div><h3 style="font-size:14px;margin-bottom:4px">Server ↔ AWS S3 (On file events)</h3><p style="font-size:13px;margin:0">When a client uploads a document, Multer processes the file on the server, which then streams it to S3 with server-side encryption. When a CA needs to view a file, the server generates a time-limited pre-signed URL from S3. Files are never publicly accessible.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ╔══════════════════════════════════════╗ -->
+<!-- ║          PAGE: TECH STACK           ║ -->
+<!-- ╚══════════════════════════════════════╝ -->
+<div class="page" id="page-tech">
+  <div class="page-header gold-glow">
+    <div class="header-grid"></div>
+    <div class="eyebrow gold">03 — Technology</div>
+    <h1 class="page-title">Tech <em>Stack</em></h1>
+    <p class="page-desc">Every library, framework, and tool used to build NoticeRadar — with exact purpose and rationale explained for developers and non-developers alike.</p>
+  </div>
+  <div class="content">
+
+    <div class="stat-row">
+      <div class="stat-box"><div class="stat-num" style="color:var(--blue)">8</div><div class="stat-lbl">Frontend Libs</div></div>
+      <div class="stat-box"><div class="stat-num" style="color:var(--green)">8</div><div class="stat-lbl">Backend Libs</div></div>
+      <div class="stat-box"><div class="stat-num" style="color:var(--gold)">2</div><div class="stat-lbl">Data/Storage</div></div>
+      <div class="stat-box"><div class="stat-num" style="color:var(--red)">5</div><div class="stat-lbl">Security Libs</div></div>
+    </div>
+
+    <h2>Frontend — What You See in the Browser</h2>
+    <p>The frontend is a <strong>React single-page application (SPA)</strong>. When you navigate between pages, the browser doesn't reload — React swaps out components instantly, making the app feel native and fast.</p>
+    <div class="grid-auto">
+      <div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500">React.js</span><span class="tag tag-blue">UI Framework</span></div><p style="font-size:13px;margin:0">The foundation. Builds fast, interactive user interfaces using reusable "components." When data changes, only the affected part of the screen re-renders — not the entire page. This is what makes NoticeRadar feel instant.</p></div>
+      <div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500">React Router</span><span class="tag tag-blue">Navigation</span></div><p style="font-size:13px;margin:0">Controls navigation without page reloads. When you click "Notices," the URL changes to /notices and React Router swaps the component — the user feels like they moved to a new page but the browser never refreshed.</p></div>
+      <div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500">Tailwind CSS</span><span class="tag tag-blue">Styling</span></div><p style="font-size:13px;margin:0">A utility-first CSS framework. Instead of writing custom CSS for every element, you apply small pre-built classes directly in HTML (e.g., "flex", "rounded-lg", "text-blue-500"). Results in consistent, responsive designs.</p></div>
+      <div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500">Axios</span><span class="tag tag-blue">API Client</span></div><p style="font-size:13px;margin:0">The HTTP client that sends requests from the browser to the backend server. Automatically attaches the user's JWT Bearer token to every request header so the server knows who is making each call.</p></div>
+      <div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500">TanStack Query</span><span class="tag tag-blue">State/Cache</span></div><p style="font-size:13px;margin:0">Manages server data caching intelligently. If you opened the Notice Inbox 30 seconds ago, it serves the cached result instantly instead of making another API call. Knows when to auto-refresh stale data.</p></div>
+      <div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500">Recharts</span><span class="tag tag-blue">Charts</span></div><p style="font-size:13px;margin:0">Renders the Dashboard analytics as interactive charts. Powers the "Notices Resolved vs Pending" bar charts, overdue trends, and average response time metrics seen by admins.</p></div>
+      <div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500">Lucide React</span><span class="tag tag-blue">Icons</span></div><p style="font-size:13px;margin:0">A library of clean, consistent SVG icons used throughout the interface. Every icon (search magnifier, upload arrow, user profile, calendar) comes from this single source, ensuring visual consistency.</p></div>
+      <div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500">React Hot Toast</span><span class="tag tag-blue">Notifications</span></div><p style="font-size:13px;margin:0">The small pop-up notifications that appear in the corner when actions succeed or fail. "Notice marked as resolved ✓" or "Upload failed — file too large." Disappear automatically after a few seconds.</p></div>
+    </div>
+
+    <hr class="section-divider">
+    <h2>Backend — The Server Brain</h2>
+    <p>The backend is a <strong>Node.js + Express REST API</strong>. It processes all requests, enforces security, talks to the database and AI, and sends structured JSON responses back to the frontend.</p>
+    <div class="grid-auto">
+      <div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500">Node.js</span><span class="tag tag-green">Runtime</span></div><p style="font-size:13px;margin:0">The JavaScript engine that runs on the server. Allows using the same language (JavaScript) on both front and backend. Excellent for handling many simultaneous I/O operations (multiple users uploading files, querying the database, calling APIs).</p></div>
+      <div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500">Express.js</span><span class="tag tag-green">Framework</span></div><p style="font-size:13px;margin:0">The web framework that sits on top of Node. It listens for incoming HTTP requests (GET /api/notices), routes them to the right handler function, runs middleware security checks, and sends responses back to the client.</p></div>
+      <div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500">Mongoose</span><span class="tag tag-green">ODM</span></div><p style="font-size:13px;margin:0">Object Data Modeling library. Acts as a translator between Node.js objects and MongoDB documents. Lets you define strict schemas (e.g., "PAN must be exactly 10 characters") that MongoDB enforces before saving any data.</p></div>
+      <div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500">JWT</span><span class="tag tag-green">Auth Tokens</span></div><p style="font-size:13px;margin:0">JSON Web Tokens are the digital "ID cards." When you log in, the server creates a signed JWT containing your user ID and role. You send this token with every subsequent request. The server verifies the signature to confirm your identity without checking the database each time.</p></div>
+      <div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500">Bcrypt</span><span class="tag tag-green">Password Hashing</span></div><p style="font-size:13px;margin:0">One-way password hashing algorithm. When a user sets a password, bcrypt converts it into a fixed-length hash. Only the hash is stored — never the actual password. Even database admins cannot read passwords. Login works by re-hashing the input and comparing hashes.</p></div>
+      <div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500">Crypto (AES-256)</span><span class="tag tag-green">Encryption</span></div><p style="font-size:13px;margin:0">Two-way encryption using the AES-256 standard (same used by banks and governments). Used specifically to encrypt IT portal credentials before storing them. The server can decrypt them when needed for RPA sync, but they are unreadable in the database itself.</p></div>
+      <div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500">Zod</span><span class="tag tag-green">Validation</span></div><p style="font-size:13px;margin:0">Schema validation library that runs before any data is processed. Ensures every API request contains valid data: email fields are actually email-formatted, required fields exist, numbers are numbers. Also validates that all environment variables (API keys, secrets) are present at server startup.</p></div>
+      <div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500">Multer</span><span class="tag tag-green">File Upload</span></div><p style="font-size:13px;margin:0">Middleware that handles multipart/form-data — the format browsers use to upload files. Configures strict upload rules: max file size of 10MB, only PDF or image file types accepted. Malicious files (scripts, executables) are rejected before they reach the server logic.</p></div>
+    </div>
+
+    <hr class="section-divider">
+    <h2>Database & Storage</h2>
+    <div class="grid-2">
+      <div class="card" style="border-left:3px solid var(--green)">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:500">MongoDB</span>
+          <span class="tag tag-green">NoSQL Database</span>
+        </div>
+        <p style="font-size:13px">Stores all structured application data as flexible JSON-like "documents." Unlike rigid spreadsheet-style SQL databases, MongoDB can store varying shapes of data — perfect for notices that might have different fields for IT vs GST types.</p>
+        <p style="font-size:13px;margin-bottom:0"><strong>Stores:</strong> User profiles, Notice records, Client data, Chat messages, Action requests, Audit log entries, Templates.</p>
+      </div>
+      <div class="card" style="border-left:3px solid var(--gold)">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:500">AWS S3 / MinIO</span>
+          <span class="tag tag-gold">Object Storage</span>
+        </div>
+        <p style="font-size:13px">Object storage used as the secure "Document Vault." MongoDB stores metadata about files (filename, uploader, linked notice), while S3 stores the actual file bytes. Files are encrypted at rest in S3. Access is controlled via short-lived pre-signed URLs.</p>
+        <p style="font-size:13px;margin-bottom:0"><strong>Stores:</strong> Notice PDFs, OCR scan images, Client-uploaded documents, Final reply PDFs on CA letterhead.</p>
+      </div>
+    </div>
+
+    <hr class="section-divider">
+    <h2>Security Libraries</h2>
+    <p>Five dedicated security libraries are installed and active on every request — they run as <strong>middleware</strong>, meaning they intercept and check every API call before the main handler ever runs.</p>
+    <div class="grid-auto">
+      <div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500">Helmet</span><span class="tag tag-red">Security</span></div><p style="font-size:13px;margin:0">Sets 11 HTTP security headers on every response. Prevents browsers from being tricked by attackers. Hides that the server uses Node.js (X-Powered-By header removed), prevents MIME sniffing, blocks clickjacking, and enforces HTTPS upgrades.</p></div>
+      <div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500">mongo-sanitize</span><span class="tag tag-red">Injection Defense</span></div><p style="font-size:13px;margin:0">Strips MongoDB operators from request bodies. Prevents attackers from injecting database commands (like <code style="background:var(--surface3);padding:1px 4px;border-radius:3px;font-size:11px">&#123;"$gt":""&#125;</code>) into form fields to bypass login checks or extract all records from the database.</p></div>
+      <div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500">xss-clean</span><span class="tag tag-red">XSS Defense</span></div><p style="font-size:13px;margin:0">Sanitizes all incoming text data to remove malicious JavaScript. Prevents attackers from typing <code style="background:var(--surface3);padding:1px 4px;border-radius:3px;font-size:11px">&lt;script&gt;</code> tags into comment boxes that would then run in other users' browsers when the comment is displayed.</p></div>
+      <div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500">rate-limit</span><span class="tag tag-red">Brute Force</span></div><p style="font-size:13px;margin:0">Counts login attempts per IP address. After exceeding the threshold (e.g., 10 failed attempts in 15 minutes), that IP is locked out for a cooldown period. Stops automated tools from rapidly guessing thousands of passwords per second.</p></div>
+      <div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500">cors</span><span class="tag tag-red">Domain Control</span></div><p style="font-size:13px;margin:0">Cross-Origin Resource Sharing policy. Configures the server to accept API requests only from the officially configured frontend domain. Any request from an unknown domain receives an instant rejection — no data is returned, no processing happens.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ╔══════════════════════════════════════╗ -->
+<!-- ║           PAGE: FEATURES            ║ -->
+<!-- ╚══════════════════════════════════════╝ -->
+<div class="page" id="page-features">
+  <div class="page-header purple-glow">
+    <div class="header-grid"></div>
+    <div class="eyebrow purple">04 — Features</div>
+    <h1 class="page-title">All <em>19 Features</em></h1>
+    <p class="page-desc">Complete descriptions of every feature organized across 5 functional zones — with real-world use-case context.</p>
+  </div>
+  <div class="content">
+
+    <div class="diagram-wrap">
+      <div class="diagram-caption">Fig — Feature Zone Map (19 features across 5 zones)</div>
+      <svg viewBox="0 0 840 340" xmlns="http://www.w3.org/2000/svg">
+        <!-- Center -->
+        <rect x="320" y="120" width="200" height="90" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+        <text x="420" y="158" text-anchor="middle" fill="#e8ecf4" font-family="Plus Jakarta Sans,sans-serif" font-size="16" font-weight="800">NoticeRadar</text>
+        <text x="420" y="178" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="2">PLATFORM</text>
+        <text x="420" y="198" text-anchor="middle" fill="rgba(139,150,176,0.4)" font-family="JetBrains Mono,monospace" font-size="9">19 Features · 5 Zones</text>
+
+        <rect x="20" y="10" width="190" height="110" rx="8" fill="rgba(79,142,247,0.08)" stroke="rgba(79,142,247,0.35)" stroke-width="1.5"/>
+        <text x="115" y="34" text-anchor="middle" fill="rgba(79,142,247,0.8)" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="1.5">🤖 AI / AUTOMATION</text>
+        <text x="115" y="55" text-anchor="middle" fill="rgba(232,236,244,0.65)" font-family="Plus Jakarta Sans,sans-serif" font-size="12">Portal Sync (RPA)</text>
+        <text x="115" y="73" text-anchor="middle" fill="rgba(232,236,244,0.65)" font-family="Plus Jakarta Sans,sans-serif" font-size="12">Quick Scan OCR</text>
+        <text x="115" y="91" text-anchor="middle" fill="rgba(232,236,244,0.65)" font-family="Plus Jakarta Sans,sans-serif" font-size="12">AI Summarization</text>
+        <text x="115" y="109" text-anchor="middle" fill="rgba(232,236,244,0.65)" font-family="Plus Jakarta Sans,sans-serif" font-size="12">AI Response Studio</text>
+        <line x1="210" y1="65" x2="318" y2="160" stroke="rgba(79,142,247,0.25)" stroke-width="1" stroke-dasharray="4,3"/>
+
+        <rect x="630" y="10" width="190" height="110" rx="8" fill="rgba(251,191,36,0.07)" stroke="rgba(251,191,36,0.35)" stroke-width="1.5"/>
+        <text x="725" y="34" text-anchor="middle" fill="rgba(251,191,36,0.8)" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="1.5">📋 WORKFLOW</text>
+        <text x="725" y="55" text-anchor="middle" fill="rgba(232,236,244,0.65)" font-family="Plus Jakarta Sans,sans-serif" font-size="12">Centralized Inbox</text>
+        <text x="725" y="73" text-anchor="middle" fill="rgba(232,236,244,0.65)" font-family="Plus Jakarta Sans,sans-serif" font-size="12">Notice Drawer</text>
+        <text x="725" y="91" text-anchor="middle" fill="rgba(232,236,244,0.65)" font-family="Plus Jakarta Sans,sans-serif" font-size="12">Notice Calendar</text>
+        <text x="725" y="109" text-anchor="middle" fill="rgba(232,236,244,0.65)" font-family="Plus Jakarta Sans,sans-serif" font-size="12">Bulk Actions</text>
+        <line x1="630" y1="65" x2="522" y2="160" stroke="rgba(251,191,36,0.25)" stroke-width="1" stroke-dasharray="4,3"/>
+
+        <rect x="20" y="220" width="190" height="110" rx="8" fill="rgba(52,211,153,0.07)" stroke="rgba(52,211,153,0.35)" stroke-width="1.5"/>
+        <text x="115" y="244" text-anchor="middle" fill="rgba(52,211,153,0.8)" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="1.5">💬 COLLABORATION</text>
+        <text x="115" y="265" text-anchor="middle" fill="rgba(232,236,244,0.65)" font-family="Plus Jakarta Sans,sans-serif" font-size="12">Action Requests</text>
+        <text x="115" y="283" text-anchor="middle" fill="rgba(232,236,244,0.65)" font-family="Plus Jakarta Sans,sans-serif" font-size="12">Client Portal</text>
+        <text x="115" y="301" text-anchor="middle" fill="rgba(232,236,244,0.65)" font-family="Plus Jakarta Sans,sans-serif" font-size="12">Comments &amp; Chat</text>
+        <text x="115" y="319" text-anchor="middle" fill="rgba(232,236,244,0.65)" font-family="Plus Jakarta Sans,sans-serif" font-size="12">Email Alerts</text>
+        <line x1="210" y1="275" x2="318" y2="200" stroke="rgba(52,211,153,0.25)" stroke-width="1" stroke-dasharray="4,3"/>
+
+        <rect x="630" y="220" width="190" height="110" rx="8" fill="rgba(167,139,250,0.07)" stroke="rgba(167,139,250,0.35)" stroke-width="1.5"/>
+        <text x="725" y="244" text-anchor="middle" fill="rgba(167,139,250,0.8)" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="1.5">⚙️ ADMINISTRATION</text>
+        <text x="725" y="265" text-anchor="middle" fill="rgba(232,236,244,0.65)" font-family="Plus Jakarta Sans,sans-serif" font-size="12">Dashboard Analytics</text>
+        <text x="725" y="283" text-anchor="middle" fill="rgba(232,236,244,0.65)" font-family="Plus Jakarta Sans,sans-serif" font-size="12">User &amp; Role Mgmt</text>
+        <text x="725" y="301" text-anchor="middle" fill="rgba(232,236,244,0.65)" font-family="Plus Jakarta Sans,sans-serif" font-size="12">Client Directory</text>
+        <text x="725" y="319" text-anchor="middle" fill="rgba(232,236,244,0.65)" font-family="Plus Jakarta Sans,sans-serif" font-size="12">Template Library</text>
+        <line x1="630" y1="275" x2="522" y2="200" stroke="rgba(167,139,250,0.25)" stroke-width="1" stroke-dasharray="4,3"/>
+
+        <rect x="290" y="285" width="260" height="50" rx="8" fill="rgba(248,113,113,0.07)" stroke="rgba(248,113,113,0.35)" stroke-width="1.5"/>
+        <text x="420" y="308" text-anchor="middle" fill="rgba(248,113,113,0.8)" font-family="JetBrains Mono,monospace" font-size="9" letter-spacing="1.5">🛡️ SECURITY &amp; AUDIT</text>
+        <text x="360" y="326" fill="rgba(232,236,244,0.65)" font-family="Plus Jakarta Sans,sans-serif" font-size="11">Doc Vault</text>
+        <text x="460" y="326" fill="rgba(232,236,244,0.65)" font-family="Plus Jakarta Sans,sans-serif" font-size="11">Audit Trail</text>
+        <text x="560" y="326" fill="rgba(232,236,244,0.65)" font-family="Plus Jakarta Sans,sans-serif" font-size="11">MFA</text>
+        <line x1="420" y1="285" x2="420" y2="212" stroke="rgba(248,113,113,0.25)" stroke-width="1" stroke-dasharray="4,3"/>
+      </svg>
+    </div>
+
+    <!-- AI Features -->
+    <h2 style="margin-top:40px">🤖 Zone 1 — Automation & AI</h2>
+    <p>These 4 features eliminate manual repetitive tasks and bring AI intelligence to every notice interaction.</p>
+    <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:40px">
+      <div class="card" style="border-left:4px solid var(--blue)"><div style="display:flex;gap:12px;align-items:flex-start"><div style="background:var(--blue-dim);min-width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--blue);font-weight:600;flex-shrink:0">#01</div><div><h3 style="font-size:14px;margin-bottom:6px">Automated Portal Sync (RPA Automation)</h3><p style="font-size:13px;margin:0">Securely stores each client's Income Tax Portal login credentials (AES-256 encrypted). Every night, the server acts like a robotic user — silently logs into incometax.gov.in, checks the notice list, downloads any new PDFs, extracts metadata (Notice #, PAN, Assessment Year, Due Date), and saves everything to the database. Zero manual effort from the CA.</p></div></div></div>
+      <div class="card" style="border-left:4px solid var(--blue)"><div style="display:flex;gap:12px;align-items:flex-start"><div style="background:var(--blue-dim);min-width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--blue);font-weight:600;flex-shrink:0">#02</div><div><h3 style="font-size:14px;margin-bottom:6px">Quick Scan & Auto-Extract (OCR)</h3><p style="font-size:13px;margin:0">A client hands a physical paper notice to the CA. The CA scans it to PDF or image and uploads it via "Quick Scan" in NoticeRadar. The OCR (Optical Character Recognition) engine reads the document pixel-by-pixel, converts the image into structured text, and automatically populates all notice form fields — Notice Number, PAN, Assessment Year, Due Date. No manual data entry required.</p></div></div></div>
+      <div class="card" style="border-left:4px solid var(--blue)"><div style="display:flex;gap:12px;align-items:flex-start"><div style="background:var(--blue-dim);min-width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--blue);font-weight:600;flex-shrink:0">#03</div><div><h3 style="font-size:14px;margin-bottom:6px">AI Notice Summarization</h3><p style="font-size:13px;margin:0">When a CA opens the Notice Drawer, NoticeRadar instantly sends the full raw notice text to the AI engine (powered by Claude/GPT). The AI returns a 3-bullet summary in plain language: the applicable legal section (e.g., "Section 143(1) Intimation"), the specific issue (e.g., "TDS mismatch — department found discrepancy vs Form 16 filed"), and the exact deadline. A CA understands the entire notice in 10 seconds without reading 10 pages of legal text.</p></div></div></div>
+      <div class="card" style="border-left:4px solid var(--blue)"><div style="display:flex;gap:12px;align-items:flex-start"><div style="background:var(--blue-dim);min-width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--blue);font-weight:600;flex-shrink:0">#04</div><div><h3 style="font-size:14px;margin-bottom:6px">AI Response Studio</h3><p style="font-size:13px;margin:0">When the CA clicks "Auto-Draft" in the Response Studio, NoticeRadar bundles the original notice summary together with all uploaded client documents and sends them to the AI. The AI generates a complete, professionally formatted legal reply letter: proper salutation, subject line referencing the notice number and assessment year, detailed body paragraphs, references to the attached documents, and a formal closing. The CA reviews it in a rich text editor, makes any corrections, and approves.</p></div></div></div>
+    </div>
+
+    <!-- Workflow Features -->
+    <hr class="section-divider">
+    <h2>📋 Zone 2 — Workflow Management</h2>
+    <p>Tools to organize, prioritize, and act on notices across hundreds of clients efficiently.</p>
+    <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:40px">
+      <div class="card" style="border-left:4px solid var(--gold)"><div style="display:flex;gap:12px;align-items:flex-start"><div style="background:var(--gold-dim);min-width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);font-weight:600;flex-shrink:0">#05</div><div><h3 style="font-size:14px;margin-bottom:6px">Centralized Notice Inbox</h3><p style="font-size:13px;margin:0">A single interface showing all notices from all clients in one place. Color-coded urgency indicators (🔴 Red = Due Tomorrow, 🟡 Yellow = Due This Week, 🟢 Green = More than a week). Sortable by status (Pending, In Progress, Resolved), department (Income Tax vs GST), assigned staff member, client name, and PAN. The primary command center for CA staff — replaces having to log into dozens of different portals.</p></div></div></div>
+      <div class="card" style="border-left:4px solid var(--gold)"><div style="display:flex;gap:12px;align-items:flex-start"><div style="background:var(--gold-dim);min-width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);font-weight:600;flex-shrink:0">#06</div><div><h3 style="font-size:14px;margin-bottom:6px">Notice Drawer</h3><p style="font-size:13px;margin:0">A full-featured slide-out side panel that opens without leaving the inbox when you click on any notice. Contains everything in one view: all metadata (PAN, Assessment Year, Section, Due Date), the AI-generated summary, all document attachments (both downloaded notices and uploaded proofs), a complete activity timeline (every action logged with timestamp), and the full communication thread with the client. No context-switching, no separate screens.</p></div></div></div>
+      <div class="card" style="border-left:4px solid var(--gold)"><div style="display:flex;gap:12px;align-items:flex-start"><div style="background:var(--gold-dim);min-width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);font-weight:600;flex-shrink:0">#07</div><div><h3 style="font-size:14px;margin-bottom:6px">Interactive Notice Calendar</h3><p style="font-size:13px;margin:0">A full-page calendar view (monthly/weekly layout) that plots every notice on its exact government-issued due date. At a glance, see which days have heavy deadline loads, identify overdue notices in red, and plan the workload for the entire firm for the month ahead. Clicking a date shows all notices due that day. Prevents the common problem of discovering a deadline has passed only when it's too late.</p></div></div></div>
+      <div class="card" style="border-left:4px solid var(--gold)"><div style="display:flex;gap:12px;align-items:flex-start"><div style="background:var(--gold-dim);min-width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);font-weight:600;flex-shrink:0">#08</div><div><h3 style="font-size:14px;margin-bottom:6px">Bulk Actions</h3><p style="font-size:13px;margin:0">Select multiple notices simultaneously in the inbox using checkboxes. Then assign all selected notices to a specific staff member in one click — or update the status of all selected notices at once. Essential when a new staff member joins the firm and you need to distribute a workload, or when completing end-of-month status updates across dozens of notices.</p></div></div></div>
+    </div>
+
+    <!-- Collab Features -->
+    <hr class="section-divider">
+    <h2>💬 Zone 3 — Client Collaboration</h2>
+    <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:40px">
+      <div class="card" style="border-left:4px solid var(--green)"><div style="display:flex;gap:12px;align-items:flex-start"><div style="background:var(--green-dim);min-width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--green);font-weight:600;flex-shrink:0">#09</div><div><h3 style="font-size:14px;margin-bottom:6px">Action Requests</h3><p style="font-size:13px;margin:0">CAs create formal, tracked document requests tied directly to a specific notice. Example: "Please upload your rent receipts for April–March 2023, Form 16 from employer, and bank statements for the period." The request is logged in the system with a status (Pending / Fulfilled), and the client receives an automated email with a direct link to upload. No chasing on WhatsApp or email. Full accountability trail.</p></div></div></div>
+      <div class="card" style="border-left:4px solid var(--green)"><div style="display:flex;gap:12px;align-items:flex-start"><div style="background:var(--green-dim);min-width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--green);font-weight:600;flex-shrink:0">#10</div><div><h3 style="font-size:14px;margin-bottom:6px">Dedicated Client Portal</h3><p style="font-size:13px;margin:0">A completely separate, simplified login at a different URL — designed for Tax Clients, not CAs. Clients see only their own notices, their current status ("Your CA is reviewing this"), and any pending document requests in plain language ("Please upload: Form 16 PDF"). They can upload files directly, track progress, and communicate — without ever seeing the complex CA workflow. Can be onboarded in 2 minutes via email invite.</p></div></div></div>
+      <div class="card" style="border-left:4px solid var(--green)"><div style="display:flex;gap:12px;align-items:flex-start"><div style="background:var(--green-dim);min-width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--green);font-weight:600;flex-shrink:0">#11</div><div><h3 style="font-size:14px;margin-bottom:6px">Comments & Real-time Chat</h3><p style="font-size:13px;margin:0">A threaded conversation lives inside each Notice Drawer. Both CA staff and the specific client can post messages, ask questions, clarify details, and share updates — all in context of the specific notice. Every message is timestamped and permanently stored. Replaces the chaos of long email chains where the attachment and context get lost after 20 replies. All communication is searchable and audit-ready.</p></div></div></div>
+      <div class="card" style="border-left:4px solid var(--green)"><div style="display:flex;gap:12px;align-items:flex-start"><div style="background:var(--green-dim);min-width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--green);font-weight:600;flex-shrink:0">#12</div><div><h3 style="font-size:14px;margin-bottom:6px">Automated Email Alerts</h3><p style="font-size:13px;margin:0">The system sends automated email notifications for every significant event — no manual sending required. Triggers include: notice approaching deadline (3-day warning, 1-day warning), new document uploaded by a client, Action Request fulfilled, notice status changed, and notice marked as Resolved. Both CAs and clients receive relevant alerts, keeping everyone informed without creating extra work.</p></div></div></div>
+    </div>
+
+    <!-- Admin Features -->
+    <hr class="section-divider">
+    <h2>⚙️ Zone 4 — Administration</h2>
+    <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:40px">
+      <div class="card" style="border-left:4px solid var(--purple)"><div style="display:flex;gap:12px;align-items:flex-start"><div style="background:var(--purple-dim);min-width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--purple);font-weight:600;flex-shrink:0">#13</div><div><h3 style="font-size:14px;margin-bottom:6px">Dashboard & Analytics</h3><p style="font-size:13px;margin:0">High-level firm performance overview rendered as interactive Recharts visualizations. Metrics shown: Total Notices by Status (Pending / In Progress / Resolved), Overdue count with trend, Average response time per staff member, Notices split by department (Income Tax vs GST), Resolution rate for the month, and most active clients. The admin can assess firm health at a glance without manually counting records.</p></div></div></div>
+      <div class="card" style="border-left:4px solid var(--purple)"><div style="display:flex;gap:12px;align-items:flex-start"><div style="background:var(--purple-dim);min-width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--purple);font-weight:600;flex-shrink:0">#14</div><div><h3 style="font-size:14px;margin-bottom:6px">User & Role Management</h3><p style="font-size:13px;margin:0">Super Admins can invite new staff members via email, assign their role (Super Admin vs Staff), set which clients they manage, and revoke access instantly when someone leaves the firm. Role-Based Access Control is enforced at the API level — not just the UI. A Staff member cannot see another client's notices even by calling the API directly. Access control is structural, not cosmetic.</p></div></div></div>
+      <div class="card" style="border-left:4px solid var(--purple)"><div style="display:flex;gap:12px;align-items:flex-start"><div style="background:var(--purple-dim);min-width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--purple);font-weight:600;flex-shrink:0">#15</div><div><h3 style="font-size:14px;margin-bottom:6px">Client Directory Management</h3><p style="font-size:13px;margin:0">A dedicated page to manage the CA firm's entire client base. Each client record stores: Full legal name, PAN card number, Entity type (Individual, Company, LLP, Partnership, HUF), Contact email, IT portal login credentials (stored AES-256 encrypted), linked staff member, and all associated notices. CAs can add new clients, edit details, and remove clients — keeping the firm's database accurate and up to date.</p></div></div></div>
+      <div class="card" style="border-left:4px solid var(--purple)"><div style="display:flex;gap:12px;align-items:flex-start"><div style="background:var(--purple-dim);min-width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--purple);font-weight:600;flex-shrink:0">#16</div><div><h3 style="font-size:14px;margin-bottom:6px">Template Management</h3><p style="font-size:13px;margin:0">Admins can create, name, and save standardized boilerplate reply templates for common notice types. Examples: "Standard GST Reply Template", "Section 143(1) TDS Mismatch Template", "HRA Exemption Proof Submission Template." When CA staff opens Response Studio, they can load any saved template as the starting point, then customize and fill in the client-specific details. Saves significant time on routine notices.</p></div></div></div>
+    </div>
+
+    <!-- Security Features -->
+    <hr class="section-divider">
+    <h2>🛡️ Zone 5 — Security & Auditing</h2>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div class="card" style="border-left:4px solid var(--red)"><div style="display:flex;gap:12px;align-items:flex-start"><div style="background:var(--red-dim);min-width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--red);font-weight:600;flex-shrink:0">#17</div><div><h3 style="font-size:14px;margin-bottom:6px">Document Vault (AWS S3)</h3><p style="font-size:13px;margin:0">All uploaded documents — Notice PDFs, scanned images, client-submitted proofs (Form 16, rent receipts, bank statements), and final reply PDFs — are stored in a dedicated AWS S3 bucket with server-side encryption. Files are never publicly accessible. When a user needs to view a file, the server generates a time-limited pre-signed URL (expires after 15 minutes) that works for that specific file. After expiry, the URL is dead — it cannot be reused or shared.</p></div></div></div>
+      <div class="card" style="border-left:4px solid var(--red)"><div style="display:flex;gap:12px;align-items:flex-start"><div style="background:var(--red-dim);min-width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--red);font-weight:600;flex-shrink:0">#18</div><div><h3 style="font-size:14px;margin-bottom:6px">Forensic Audit Trail</h3><p style="font-size:13px;margin:0">Every single state-changing action in the system is permanently, immutably logged in the AuditLog collection with full context: the user's ID and name, their IP address, the exact timestamp, the action performed, and what data changed. Logged events include: user logins and logouts, notice creation and deletion, document uploads and downloads, portal syncs, status changes, and any admin actions. Super Admins can view the full forensic log — essential for regulatory compliance and internal accountability.</p></div></div></div>
+      <div class="card" style="border-left:4px solid var(--red)"><div style="display:flex;gap:12px;align-items:flex-start"><div style="background:var(--red-dim);min-width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--red);font-weight:600;flex-shrink:0">#19</div><div><h3 style="font-size:14px;margin-bottom:6px">Multi-Factor Authentication (MFA)</h3><p style="font-size:13px;margin:0">Users can link Google Authenticator (or any TOTP app) to their account. Once enabled, login requires two factors: (1) the correct password, AND (2) the current 6-digit TOTP code from the authenticator app — which rotates every 30 seconds. Even if a password is leaked via phishing or a data breach elsewhere, the account cannot be accessed without the physical phone that has the authenticator app. Optional but strongly recommended for all users handling sensitive financial data.</p></div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ╔══════════════════════════════════════╗ -->
+<!-- ║          PAGE: DATA FLOW            ║ -->
+<!-- ╚══════════════════════════════════════╝ -->
+<div class="page" id="page-dataflow">
+  <div class="page-header orange-glow">
+    <div class="header-grid"></div>
+    <div class="eyebrow orange">05 — Data Flow</div>
+    <h1 class="page-title">Complete <em>Data Flow</em></h1>
+    <p class="page-desc">Exactly how a notice enters NoticeRadar, flows between all actors, and reaches final resolution — every step explained.</p>
+  </div>
+  <div class="content">
+
+    <div class="callout warn">
+      <span class="callout-icon">📌</span>
+      <div>
+        <div class="callout-title">Two entry points, one unified workflow</div>
+        <p class="callout-body">Notices can enter via <strong>Automated RPA Sync</strong> (server logs into portal overnight) or <strong>Manual OCR Scan</strong> (CA uploads a physical notice scan). After entry, both paths merge into the same 8-step workflow shown below.</p>
+      </div>
+    </div>
+
+    <!-- Step-by-step lifecycle -->
+    <div style="display:flex;flex-direction:column;gap:0;margin-top:32px;position:relative">
+      <div style="position:absolute;left:24px;top:40px;bottom:40px;width:2px;background:linear-gradient(180deg,var(--blue),var(--green),var(--gold),var(--purple));border-radius:1px;"></div>
+
+      <style>
+        .lc{display:flex;gap:24px;align-items:flex-start;padding:8px 0;}
+        .lc-dot{flex-shrink:0;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;position:relative;z-index:1;border:2px solid;}
+        .lc-c{flex:1;background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:20px 24px;margin-bottom:6px;}
+        .lc-c h4{font-size:15px;font-weight:700;margin-bottom:8px;}
+        .lc-c p{font-size:13px;color:var(--text2);margin:0;line-height:1.65;}
+        .actors{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap;}
+        .a{font-family:'JetBrains Mono',monospace;font-size:10px;padding:3px 8px;border-radius:4px;font-weight:500;}
+        .a-gov{background:rgba(167,139,250,0.15);color:var(--purple);}
+        .a-sys{background:var(--blue-dim);color:var(--blue);}
+        .a-ca{background:var(--green-dim);color:var(--green);}
+        .a-cl{background:var(--orange-dim);color:var(--orange);}
+        .a-ai{background:rgba(251,191,36,0.12);color:var(--gold);}
+      </style>
+
+      <div class="lc"><div class="lc-dot" style="background:rgba(79,142,247,0.15);border-color:var(--blue);color:var(--blue)">01</div><div class="lc-c"><h4>Notice Origin — Two Entry Points</h4><p><strong>Digital (Automated):</strong> The CA has already saved the client's Income Tax Portal credentials inside NoticeRadar (encrypted). Every night, the backend acts like a robotic user (RPA). It logs into incometax.gov.in, checks for new notices, downloads PDFs, extracts data (Notice Number, PAN, Due Date), and saves everything to MongoDB. <br><br><strong>Physical (OCR):</strong> A client physically hands a paper notice to the CA. The CA scans it to PDF, uploads via "Quick Scan." The OCR engine reads the image, converts it to text, and auto-populates all form fields.</p><div class="actors"><span class="a a-gov">IT Portal</span><span class="a a-sys">Backend Server</span><span class="a a-ca">CA Staff</span></div></div></div>
+
+      <div class="lc"><div class="lc-dot" style="background:rgba(79,142,247,0.15);border-color:var(--blue);color:var(--blue)">02</div><div class="lc-c"><h4>Notice Appears in Inbox — CA Alerted</h4><p>The new notice record is written to MongoDB. Within seconds, it appears in the Notice Inbox, sorted by urgency (color-coded). An automated email is sent to the assigned CA staff member: "A new notice has arrived for [Client Name] — PAN: XXXXX1234X. Due: [date]. View now →" The notice is now in the system and ready for action.</p><div class="actors"><span class="a a-sys">System</span><span class="a a-ca">CA Staff</span></div></div></div>
+
+      <div class="lc"><div class="lc-dot" style="background:rgba(52,211,153,0.12);border-color:var(--green);color:var(--green)">03</div><div class="lc-c"><h4>AI Summarization — 10-Second Understanding</h4><p>The CA clicks on the notice to open the Notice Drawer. At this exact moment, the server sends the full raw notice text to the AI Engine. The AI responds with a concise 3-point summary in plain language. For example: <em>"1. Section 143(1) Intimation for AY 2023-24. 2. TDS mismatch — department found ₹23,400 difference between Form 26AS and ITR filed. 3. Required: Form 16 and proof of TDS deductions. Deadline: 45 days from notice date."</em> The CA now fully understands the situation without reading any legal text.</p><div class="actors"><span class="a a-ca">CA Staff</span><span class="a a-ai">AI Engine</span></div></div></div>
+
+      <div class="lc"><div class="lc-dot" style="background:rgba(52,211,153,0.12);border-color:var(--green);color:var(--green)">04</div><div class="lc-c"><h4>Action Request Created — Client Notified</h4><p>To respond to the government, the CA needs documents from the Tax Client. Inside the Notice Drawer, the CA clicks "Create Action Request" and types the specific requirements: <em>"Please upload your Form 16 from your employer, bank statements for April–March 2023, and rent receipts if you claimed HRA."</em> The moment this is saved, NoticeRadar automatically emails the Tax Client: "Your CA needs documents to resolve Notice #ITBA-2024-00123. Click here to upload securely →"</p><div class="actors"><span class="a a-ca">CA Staff</span><span class="a a-sys">System</span><span class="a a-cl">Tax Client</span></div></div></div>
+
+      <div class="lc"><div class="lc-dot" style="background:rgba(251,191,36,0.1);border-color:var(--gold);color:var(--gold)">05</div><div class="lc-c"><h4>Client Uploads Documents — Secure Vault Storage</h4><p>The Tax Client does not need to understand the CA's complex dashboard. They click the email link and arrive at their simple Client Portal. They see one clear request: "Please upload: Form 16, Bank Statements, Rent Receipts." They drag-and-drop their files. The moment upload completes: Multer processes the files on the server → files are streamed to AWS S3 with server-side encryption → S3 file references are stored in MongoDB → the Action Request status updates to "Fulfilled." The documents are now securely vaulted and linked directly to the notice.</p><div class="actors"><span class="a a-cl">Tax Client</span><span class="a a-sys">Server + S3</span></div></div></div>
+
+      <div class="lc"><div class="lc-dot" style="background:rgba(251,191,36,0.1);border-color:var(--gold);color:var(--gold)">06</div><div class="lc-c"><h4>CA Receives Upload Alert</h4><p>NoticeRadar immediately sends the CA staff member an email: "Your client [Name] has uploaded the requested documents for Notice #ITBA-2024-00123." The Notice Drawer now shows the uploaded files as downloadable attachments. The CA can preview PDFs directly in the browser. The activity timeline shows the exact upload timestamp. The CA is now ready to draft the government response.</p><div class="actors"><span class="a a-sys">System</span><span class="a a-ca">CA Staff</span></div></div></div>
+
+      <div class="lc"><div class="lc-dot" style="background:rgba(167,139,250,0.12);border-color:var(--purple);color:var(--purple)">07</div><div class="lc-c"><h4>AI Drafts the Legal Reply</h4><p>The CA opens the Response Studio and clicks "Auto-Draft." NoticeRadar bundles the original notice summary + all uploaded documents and sends them to the AI Engine. The AI generates a complete, formally-structured reply letter: proper salutation addressing the Assessing Officer, the notice reference number and assessment year in the subject line, a detailed body explanation with references to the attached proofs, and a formal closing statement. Example opening: <em>"To, The Assessing Officer, Sub: Reply to Notice u/s 143(1) for AY 2023-24 — PAN: ABCDE1234F. We hereby submit our response to the above-referenced intimation..."</em> The CA reads and edits in the rich text editor.</p><div class="actors"><span class="a a-ca">CA Staff</span><span class="a a-ai">AI Engine</span></div></div></div>
+
+      <div class="lc"><div class="lc-dot" style="background:rgba(167,139,250,0.12);border-color:var(--purple);color:var(--purple)">08</div><div class="lc-c"><h4>Finalize, Submit & Resolve</h4><p>The CA approves the draft. NoticeRadar generates a final, uneditable PDF formatted on the firm's official letterhead. The CA downloads this PDF, logs into the Income Tax portal directly, selects the specific notice, attaches the reply PDF along with all the supporting documents, and submits. Back in NoticeRadar, the CA clicks "Mark as Resolved." The notice status updates to Resolved. The complete interaction is permanently logged in the Forensic Audit Trail. The lifecycle is complete.</p><div class="actors"><span class="a a-ca">CA Staff</span><span class="a a-gov">IT Portal</span><span class="a a-sys">Audit Trail</span></div></div></div>
+    </div>
+
+    <hr class="section-divider">
+    <h2>Sequence Diagram — Actor Message Flow</h2>
+    <div style="background:var(--surface);border:1px solid var(--border2);border-radius:16px;overflow:hidden;margin-top:16px">
+      <div style="display:grid;grid-template-columns:44px 120px 120px 1fr;padding:12px 24px;background:var(--surface3);border-bottom:1px solid var(--border2)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3)">#</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3)">FROM</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3)">TO</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3)">ACTION</span>
+      </div>
+      <style>
+        .sr{display:grid;grid-template-columns:44px 120px 120px 1fr;padding:12px 24px;border-bottom:1px solid var(--border);align-items:center;transition:background 0.15s;}
+        .sr:last-child{border-bottom:none;}
+        .sr:hover{background:var(--surface2);}
+        .sn{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text3);}
+        .sf{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;}
+        .sa{font-size:13px;color:var(--text2);}
+      </style>
+      <div class="sr"><span class="sn">01</span><span class="sf" style="color:var(--purple)">IT Portal</span><span class="sf" style="color:var(--blue)">System</span><span class="sa">Auto-fetch new notice via RPA sync (nightly)</span></div>
+      <div class="sr"><span class="sn">02</span><span class="sf" style="color:var(--blue)">System</span><span class="sf" style="color:var(--green)">CA Staff</span><span class="sa">Alert: new notice in Inbox, email notification sent</span></div>
+      <div class="sr"><span class="sn">03</span><span class="sf" style="color:var(--green)">CA Staff</span><span class="sf" style="color:var(--blue)">System</span><span class="sa">Opens Notice Drawer — triggers AI summarization</span></div>
+      <div class="sr"><span class="sn">04</span><span class="sf" style="color:var(--blue)">System</span><span class="sf" style="color:var(--green)">CA Staff</span><span class="sa" style="color:var(--gold)">↩ AI returns: 3-bullet summary (section, issue, deadline)</span></div>
+      <div class="sr"><span class="sn">05</span><span class="sf" style="color:var(--green)">CA Staff</span><span class="sf" style="color:var(--blue)">System</span><span class="sa">Creates Action Request specifying required documents</span></div>
+      <div class="sr"><span class="sn">06</span><span class="sf" style="color:var(--blue)">System</span><span class="sf" style="color:var(--orange)">Tax Client</span><span class="sa">Email alert: "Action Required — upload documents for Notice #ITBA-123"</span></div>
+      <div class="sr"><span class="sn">07</span><span class="sf" style="color:var(--orange)">Tax Client</span><span class="sf" style="color:var(--blue)">System</span><span class="sa">Logs into Client Portal, uploads PDF → encrypted → stored in S3</span></div>
+      <div class="sr"><span class="sn">08</span><span class="sf" style="color:var(--blue)">System</span><span class="sf" style="color:var(--green)">CA Staff</span><span class="sa">Alert: "Documents uploaded and ready for review"</span></div>
+      <div class="sr"><span class="sn">09</span><span class="sf" style="color:var(--green)">CA Staff</span><span class="sf" style="color:var(--blue)">System</span><span class="sa">Opens Response Studio, clicks "Auto-Draft"</span></div>
+      <div class="sr"><span class="sn">10</span><span class="sf" style="color:var(--blue)">System</span><span class="sf" style="color:var(--green)">CA Staff</span><span class="sa" style="color:var(--gold)">↩ AI returns: full legally formatted reply letter draft</span></div>
+      <div class="sr"><span class="sn">11</span><span class="sf" style="color:var(--green)">CA Staff</span><span class="sf" style="color:var(--green)">CA Staff</span><span class="sa">Reviews draft in rich text editor, edits, approves</span></div>
+      <div class="sr"><span class="sn">12</span><span class="sf" style="color:var(--green)">CA Staff</span><span class="sf" style="color:var(--purple)">IT Portal</span><span class="sa">Downloads final letterhead PDF, submits to government portal</span></div>
+      <div class="sr"><span class="sn">13</span><span class="sf" style="color:var(--green)">CA Staff</span><span class="sf" style="color:var(--blue)">System</span><span class="sa">Marks notice "Resolved" → full lifecycle logged in Audit Trail</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ╔══════════════════════════════════════╗ -->
+<!-- ║           PAGE: SECURITY            ║ -->
+<!-- ╚══════════════════════════════════════╝ -->
+<div class="page" id="page-security">
+  <div class="page-header red-glow">
+    <div class="header-grid"></div>
+    <div class="eyebrow red">06 — Security</div>
+    <h1 class="page-title">Enterprise <em>Security</em></h1>
+    <p class="page-desc">NoticeRadar handles PAN cards, IT portal credentials, and sensitive financial documents. Security is not optional — 8 independent layers protect every request.</p>
+  </div>
+  <div class="content">
+
+    <div class="stat-row">
+      <div class="stat-box"><div class="stat-num" style="color:var(--red)">8</div><div class="stat-lbl">Security Layers</div></div>
+      <div class="stat-box"><div class="stat-num" style="color:var(--gold)">256</div><div class="stat-lbl">Bit Encryption</div></div>
+      <div class="stat-box"><div class="stat-num" style="color:var(--blue)">11</div><div class="stat-lbl">HTTP Headers</div></div>
+      <div class="stat-box"><div class="stat-num" style="color:var(--green)">3</div><div class="stat-lbl">User Roles</div></div>
+    </div>
+
+    <!-- RBAC Table -->
+    <h2>Role-Based Access Control (RBAC)</h2>
+    <p>Three user roles with strictly scoped permissions. Enforced at the API level on every request — not just in the user interface. Even if a Staff user calls the API directly, they cannot access data outside their scope.</p>
+    <div style="background:var(--surface);border:1px solid var(--border2);border-radius:14px;overflow:hidden;margin:20px 0 40px">
+      <table style="width:100%;border-collapse:collapse;">
+        <thead>
+          <tr style="background:var(--surface3)">
+            <th style="padding:14px 20px;text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border2)">Role</th>
+            <th style="padding:14px 12px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border2)">All Notices</th>
+            <th style="padding:14px 12px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border2)">Assigned Only</th>
+            <th style="padding:14px 12px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border2)">User Mgmt</th>
+            <th style="padding:14px 12px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border2)">Audit Logs</th>
+            <th style="padding:14px 12px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);border-bottom:1px solid var(--border2)">Client Portal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:14px 20px"><span style="background:var(--red-dim);color:var(--red);font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;padding:4px 10px;border-radius:6px">⚡ Super Admin</span></td>
+            <td style="padding:14px 12px;text-align:center;color:var(--green);font-size:16px">✓</td>
+            <td style="padding:14px 12px;text-align:center;color:var(--green);font-size:16px">✓</td>
+            <td style="padding:14px 12px;text-align:center;color:var(--green);font-size:16px">✓</td>
+            <td style="padding:14px 12px;text-align:center;color:var(--green);font-size:16px">✓</td>
+            <td style="padding:14px 12px;text-align:center;color:var(--text3);font-size:14px">—</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:14px 20px"><span style="background:var(--blue-dim);color:var(--blue);font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;padding:4px 10px;border-radius:6px">👤 CA Staff</span></td>
+            <td style="padding:14px 12px;text-align:center;color:var(--text3);font-size:14px">—</td>
+            <td style="padding:14px 12px;text-align:center;color:var(--green);font-size:16px">✓</td>
+            <td style="padding:14px 12px;text-align:center;color:var(--text3);font-size:14px">—</td>
+            <td style="padding:14px 12px;text-align:center;color:var(--text3);font-size:14px">—</td>
+            <td style="padding:14px 12px;text-align:center;color:var(--text3);font-size:14px">—</td>
+          </tr>
+          <tr>
+            <td style="padding:14px 20px"><span style="background:var(--green-dim);color:var(--green);font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;padding:4px 10px;border-radius:6px">📁 Tax Client</span></td>
+            <td style="padding:14px 12px;text-align:center;color:var(--text3);font-size:14px">—</td>
+            <td style="padding:14px 12px;text-align:center;color:var(--text3);font-size:14px">—</td>
+            <td style="padding:14px 12px;text-align:center;color:var(--text3);font-size:14px">—</td>
+            <td style="padding:14px 12px;text-align:center;color:var(--text3);font-size:14px">—</td>
+            <td style="padding:14px 12px;text-align:center;color:var(--green);font-size:12px">✓ own only</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>All 8 Security Layers</h2>
+    <p>Each layer operates independently, defending against a specific class of attack. All 8 are active simultaneously on every production request.</p>
+    <div style="display:flex;flex-direction:column;gap:14px;margin-top:20px">
+      <div class="card" style="display:flex;gap:20px;align-items:flex-start">
+        <div style="background:var(--blue-dim);width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0">🔐</div>
+        <div><div style="display:flex;align-items:center;gap:10px;margin-bottom:6px"><h3 style="font-size:15px;margin:0">Role-Based Access Control</h3><span style="font-family:'JetBrains Mono',monospace;font-size:10px;background:var(--surface3);color:var(--text3);padding:2px 8px;border-radius:4px">auth.middleware.js</span></div><p style="font-size:13px;margin:0">Every API route is protected by auth.middleware.js which verifies the JWT token AND checks if the user's role has permission to access that specific resource. A Staff member attempting to fetch another client's notices receives a 403 Forbidden response — even if they have a valid JWT token.</p></div>
+      </div>
+      <div class="card" style="display:flex;gap:20px;align-items:flex-start">
+        <div style="background:var(--gold-dim);width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0">🔒</div>
+        <div><div style="display:flex;align-items:center;gap:10px;margin-bottom:6px"><h3 style="font-size:15px;margin:0">AES-256 + Bcrypt Encryption</h3><span style="font-family:'JetBrains Mono',monospace;font-size:10px;background:var(--surface3);color:var(--text3);padding:2px 8px;border-radius:4px">crypto · bcrypt</span></div><p style="font-size:13px;margin:0"><strong>Bcrypt</strong> (one-way): passwords are transformed into irreversible hashes. Even Anthropic cannot read stored passwords — login works by re-hashing the input and comparing hashes. <strong>AES-256</strong> (two-way): IT portal credentials are encrypted before storage. The server holds the decryption key in an environment variable — separate from the database. Both the database and the key must be compromised simultaneously for credentials to be exposed.</p></div>
+      </div>
+      <div class="card" style="display:flex;gap:20px;align-items:flex-start">
+        <div style="background:var(--purple-dim);width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0">📱</div>
+        <div><div style="display:flex;align-items:center;gap:10px;margin-bottom:6px"><h3 style="font-size:15px;margin:0">Multi-Factor Authentication</h3><span style="font-family:'JetBrains Mono',monospace;font-size:10px;background:var(--surface3);color:var(--text3);padding:2px 8px;border-radius:4px">TOTP / RFC 6238</span></div><p style="font-size:13px;margin:0">Google Authenticator uses the TOTP standard (Time-based One-Time Password, RFC 6238). A 6-digit code is derived from a shared secret + the current Unix timestamp, rotated every 30 seconds. Even with a stolen password, an attacker cannot log in without the physical device running the authenticator app generating the current code.</p></div>
+      </div>
+      <div class="card" style="display:flex;gap:20px;align-items:flex-start">
+        <div style="background:var(--green-dim);width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0">🛡️</div>
+        <div><div style="display:flex;align-items:center;gap:10px;margin-bottom:6px"><h3 style="font-size:15px;margin:0">Helmet HTTP Security Headers</h3><span style="font-family:'JetBrains Mono',monospace;font-size:10px;background:var(--surface3);color:var(--text3);padding:2px 8px;border-radius:4px">helmet</span></div><p style="font-size:13px;margin:0">Sets 11 HTTP headers on every response: removes X-Powered-By (hides Node.js), sets Content-Security-Policy (prevents XSS), X-Frame-Options: DENY (blocks clickjacking), X-Content-Type-Options (prevents MIME sniffing), Strict-Transport-Security (enforces HTTPS), Referrer-Policy, and more. These prevent entire classes of browser-based attacks at the HTTP protocol level.</p></div>
+      </div>
+      <div class="card" style="display:flex;gap:20px;align-items:flex-start">
+        <div style="background:var(--red-dim);width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0">💉</div>
+        <div><div style="display:flex;align-items:center;gap:10px;margin-bottom:6px"><h3 style="font-size:15px;margin:0">NoSQL Injection Prevention</h3><span style="font-family:'JetBrains Mono',monospace;font-size:10px;background:var(--surface3);color:var(--text3);padding:2px 8px;border-radius:4px">express-mongo-sanitize</span></div><p style="font-size:13px;margin:0">In MongoDB, attackers can type operators like <code style="background:var(--surface3);padding:2px 6px;border-radius:3px;font-size:11px">&#123;"$gt":""&#125;</code> into form fields to bypass password checks (the query becomes "find user where password is greater than empty string" — which returns every user). mongo-sanitize removes all keys starting with $ from req.body, req.query, and req.params before the request reaches any controller.</p></div>
+      </div>
+      <div class="card" style="display:flex;gap:20px;align-items:flex-start">
+        <div style="background:var(--orange-dim);width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0">🚫</div>
+        <div><div style="display:flex;align-items:center;gap:10px;margin-bottom:6px"><h3 style="font-size:15px;margin:0">XSS Cross-Site Scripting Protection</h3><span style="font-family:'JetBrains Mono',monospace;font-size:10px;background:var(--surface3);color:var(--text3);padding:2px 8px;border-radius:4px">xss-clean</span></div><p style="font-size:13px;margin:0">Stored XSS attack: an attacker types <code style="background:var(--surface3);padding:2px 6px;border-radius:3px;font-size:11px">&lt;script&gt;document.cookie&lt;/script&gt;</code> into a comment field. If stored and displayed to other users without sanitization, it executes in their browser, stealing their session cookies. xss-clean strips all HTML tags and script content from incoming text before any data is stored in MongoDB.</p></div>
+      </div>
+      <div class="card" style="display:flex;gap:20px;align-items:flex-start">
+        <div style="background:var(--blue-dim);width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0">⏱️</div>
+        <div><div style="display:flex;align-items:center;gap:10px;margin-bottom:6px"><h3 style="font-size:15px;margin:0">Rate Limiting</h3><span style="font-family:'JetBrains Mono',monospace;font-size:10px;background:var(--surface3);color:var(--text3);padding:2px 8px;border-radius:4px">express-rate-limit</span></div><p style="font-size:13px;margin:0">Configures a sliding window rate limiter on the /api/auth/login endpoint. Example configuration: 10 failed attempts per 15 minutes per IP address. After the threshold is exceeded, the IP receives a 429 Too Many Requests response for the remainder of the window. Automated password-guessing tools (which can try thousands of combinations per second) are defeated — they're locked out after just 10 attempts.</p></div>
+      </div>
+      <div class="card" style="display:flex;gap:20px;align-items:flex-start">
+        <div style="background:var(--green-dim);width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0">🌐</div>
+        <div><div style="display:flex;align-items:center;gap:10px;margin-bottom:6px"><h3 style="font-size:15px;margin:0">CORS Domain Allowlisting</h3><span style="font-family:'JetBrains Mono',monospace;font-size:10px;background:var(--surface3);color:var(--text3);padding:2px 8px;border-radius:4px">cors</span></div><p style="font-size:13px;margin:0">Cross-Origin Resource Sharing policy: the server explicitly allows only the configured frontend domain in its CORS whitelist (e.g., https://app.noticeradar.com). Any request from a different origin — a malicious website, a hacker's script, a rogue third-party app — receives a CORS error in the preflight check. The actual request is never processed. No data is ever returned to unauthorized origins.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ╔══════════════════════════════════════╗ -->
+<!-- ║         PAGE: STRUCTURE             ║ -->
+<!-- ╚══════════════════════════════════════╝ -->
+<div class="page" id="page-structure">
+  <div class="page-header">
+    <div class="header-grid"></div>
+    <div class="eyebrow">07 — Structure</div>
+    <h1 class="page-title">Project <em>Structure</em></h1>
+    <p class="page-desc">Every folder and file in the codebase — what it does, why it exists, and how it connects to the rest of the system.</p>
+  </div>
+  <div class="content">
+
+    <div class="diagram-wrap">
+      <div class="diagram-caption">Fig — Full Project Folder Architecture</div>
+      <svg viewBox="0 0 860 400" xmlns="http://www.w3.org/2000/svg">
+        <!-- Server side -->
+        <rect x="10" y="10" width="400" height="378" rx="10" fill="none" stroke="rgba(79,142,247,0.3)" stroke-width="1.5" stroke-dasharray="6,3"/>
+        <text x="210" y="36" text-anchor="middle" fill="rgba(79,142,247,0.7)" font-family="JetBrains Mono,monospace" font-size="10" letter-spacing="2">server/ (Backend)</text>
+
+        <rect x="26" y="52" width="172" height="52" rx="6" fill="rgba(79,142,247,0.08)" stroke="rgba(79,142,247,0.3)" stroke-width="1"/>
+        <text x="112" y="74" text-anchor="middle" fill="rgba(232,236,244,0.8)" font-family="JetBrains Mono,monospace" font-size="10" font-weight="500">src/config/</text>
+        <text x="112" y="94" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="8">db.js · env.js (Zod)</text>
+
+        <rect x="218" y="52" width="178" height="52" rx="6" fill="rgba(79,142,247,0.08)" stroke="rgba(79,142,247,0.3)" stroke-width="1"/>
+        <text x="307" y="74" text-anchor="middle" fill="rgba(232,236,244,0.8)" font-family="JetBrains Mono,monospace" font-size="10" font-weight="500">src/models/</text>
+        <text x="307" y="94" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="8">Notice · User · AuditLog · Client</text>
+
+        <rect x="26" y="120" width="172" height="52" rx="6" fill="rgba(79,142,247,0.08)" stroke="rgba(79,142,247,0.3)" stroke-width="1"/>
+        <text x="112" y="142" text-anchor="middle" fill="rgba(232,236,244,0.8)" font-family="JetBrains Mono,monospace" font-size="10" font-weight="500">src/routes/</text>
+        <text x="112" y="162" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="8">URL path → controller map</text>
+
+        <rect x="218" y="120" width="178" height="52" rx="6" fill="rgba(79,142,247,0.08)" stroke="rgba(79,142,247,0.3)" stroke-width="1"/>
+        <text x="307" y="142" text-anchor="middle" fill="rgba(232,236,244,0.8)" font-family="JetBrains Mono,monospace" font-size="10" font-weight="500">src/controllers/</text>
+        <text x="307" y="162" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="8">notices · auth · clients</text>
+
+        <rect x="26" y="188" width="172" height="66" rx="6" fill="rgba(79,142,247,0.08)" stroke="rgba(79,142,247,0.3)" stroke-width="1"/>
+        <text x="112" y="210" text-anchor="middle" fill="rgba(232,236,244,0.8)" font-family="JetBrains Mono,monospace" font-size="10" font-weight="500">src/services/</text>
+        <text x="112" y="230" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="8">ai.service.js</text>
+        <text x="112" y="246" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="8">auth · encryption</text>
+
+        <rect x="218" y="188" width="178" height="66" rx="6" fill="rgba(79,142,247,0.08)" stroke="rgba(79,142,247,0.3)" stroke-width="1"/>
+        <text x="307" y="210" text-anchor="middle" fill="rgba(232,236,244,0.8)" font-family="JetBrains Mono,monospace" font-size="10" font-weight="500">src/middleware/</text>
+        <text x="307" y="230" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="8">auth.middleware.js</text>
+        <text x="307" y="246" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="8">upload.middleware.js</text>
+
+        <rect x="26" y="272" width="370" height="52" rx="6" fill="rgba(248,113,113,0.07)" stroke="rgba(248,113,113,0.3)" stroke-width="1"/>
+        <text x="211" y="294" text-anchor="middle" fill="rgba(232,236,244,0.8)" font-family="JetBrains Mono,monospace" font-size="10" font-weight="500">src/app.js · src/server.js</text>
+        <text x="211" y="314" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="8">Boot · DB Connect · Helmet · CORS · Rate Limiting · All Guards</text>
+
+        <rect x="26" y="338" width="370" height="36" rx="6" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+        <text x="211" y="361" text-anchor="middle" fill="rgba(139,150,176,0.4)" font-family="JetBrains Mono,monospace" font-size="9">.env · package.json · .gitignore</text>
+
+        <!-- Web side -->
+        <rect x="448" y="10" width="402" height="378" rx="10" fill="none" stroke="rgba(251,146,60,0.3)" stroke-width="1.5" stroke-dasharray="6,3"/>
+        <text x="649" y="36" text-anchor="middle" fill="rgba(251,146,60,0.7)" font-family="JetBrains Mono,monospace" font-size="10" letter-spacing="2">web/ (React Frontend)</text>
+
+        <rect x="464" y="52" width="172" height="52" rx="6" fill="rgba(251,146,60,0.08)" stroke="rgba(251,146,60,0.25)" stroke-width="1"/>
+        <text x="550" y="74" text-anchor="middle" fill="rgba(232,236,244,0.8)" font-family="JetBrains Mono,monospace" font-size="10" font-weight="500">src/api/</text>
+        <text x="550" y="94" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="8">axios.js · endpoints.js</text>
+
+        <rect x="656" y="52" width="180" height="52" rx="6" fill="rgba(251,146,60,0.08)" stroke="rgba(251,146,60,0.25)" stroke-width="1"/>
+        <text x="746" y="74" text-anchor="middle" fill="rgba(232,236,244,0.8)" font-family="JetBrains Mono,monospace" font-size="10" font-weight="500">src/auth/</text>
+        <text x="746" y="94" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="8">AuthContext · ProtectedRoute</text>
+
+        <rect x="464" y="120" width="372" height="40" rx="6" fill="rgba(251,146,60,0.06)" stroke="rgba(251,146,60,0.25)" stroke-width="1"/>
+        <text x="650" y="137" text-anchor="middle" fill="rgba(232,236,244,0.8)" font-family="JetBrains Mono,monospace" font-size="10" font-weight="500">src/layouts/</text>
+        <text x="650" y="152" text-anchor="middle" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="8">AppLayout.js · ClientPortalLayout.js</text>
+
+        <rect x="464" y="176" width="372" height="148" rx="6" fill="rgba(251,191,36,0.05)" stroke="rgba(251,191,36,0.25)" stroke-width="1"/>
+        <text x="650" y="198" text-anchor="middle" fill="rgba(251,191,36,0.8)" font-family="JetBrains Mono,monospace" font-size="10" font-weight="500">src/pages/</text>
+        <text x="478" y="218" fill="rgba(251,146,60,0.8)" font-family="JetBrains Mono,monospace" font-size="9">Admin/</text>
+        <text x="560" y="218" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="8">AuditLogs · ForensicLogs · UserManagement</text>
+        <text x="478" y="236" fill="rgba(251,146,60,0.8)" font-family="JetBrains Mono,monospace" font-size="9">ClientPortal/</text>
+        <text x="560" y="236" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="8">ClientDashboard · ClientNoticeDetails</text>
+        <text x="478" y="254" fill="rgba(251,146,60,0.8)" font-family="JetBrains Mono,monospace" font-size="9">Clients/</text>
+        <text x="560" y="254" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="8">ClientList.js (manage firm's client base)</text>
+        <text x="478" y="272" fill="rgba(79,142,247,0.8)" font-family="JetBrains Mono,monospace" font-size="9">Dashboard/</text>
+        <text x="560" y="272" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="8">DashboardStats.js · Analytics charts</text>
+        <text x="478" y="290" fill="rgba(251,191,36,0.8)" font-family="JetBrains Mono,monospace" font-size="9">Notices/</text>
+        <text x="560" y="290" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="8">Inbox · QuickScan · Calendar · NoticeDrawer</text>
+        <text x="478" y="308" fill="rgba(52,211,153,0.8)" font-family="JetBrains Mono,monospace" font-size="9">Responses/</text>
+        <text x="560" y="308" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="8">ResponseStudio.js (AI drafting editor)</text>
+        <text x="478" y="326" fill="rgba(167,139,250,0.8)" font-family="JetBrains Mono,monospace" font-size="9">Tools/</text>
+        <text x="560" y="326" fill="rgba(139,150,176,0.5)" font-family="JetBrains Mono,monospace" font-size="8">PortalSync.js (trigger RPA mass scrape)</text>
+
+        <rect x="464" y="338" width="372" height="36" rx="6" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+        <text x="650" y="361" text-anchor="middle" fill="rgba(139,150,176,0.4)" font-family="JetBrains Mono,monospace" font-size="9">src/styles/theme.css · src/index.js · src/App.js</text>
+      </svg>
+    </div>
+
+    <h2>Server/ — Every File Explained</h2>
+
+    <h3 style="margin-top:28px;color:var(--blue)">Entry Points</h3>
+    <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:32px">
+      <div class="card"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--blue);margin-bottom:6px">src/app.js</div><p style="font-size:13px;margin:0">Creates and configures the Express application. Registers all global middleware in order: Helmet (security headers) → CORS (domain allowlist) → express-rate-limit → express-mongo-sanitize → xss-clean → JSON body parser → routes. The order matters — security guards must run before any route handler.</p></div>
+      <div class="card"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--blue);margin-bottom:6px">src/server.js</div><p style="font-size:13px;margin:0">The actual startup file. Calls db.js to connect to MongoDB, then starts the Express server listening on the configured port. Also handles graceful shutdown — if the process is killed, it closes the MongoDB connection cleanly before exiting.</p></div>
+    </div>
+
+    <h3 style="color:var(--green)">src/config/</h3>
+    <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:32px">
+      <div class="card"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--green);margin-bottom:6px">config/db.js</div><p style="font-size:13px;margin:0">Contains the Mongoose connection logic. Reads the MongoDB connection string from environment variables (never hardcoded) and establishes the database connection. Includes retry logic and connection event handlers for production resilience.</p></div>
+      <div class="card"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--green);margin-bottom:6px">config/env.js</div><p style="font-size:13px;margin:0">Uses Zod to define and validate all required environment variables at startup: MongoDB URI, JWT secret, AWS credentials, AI API key, encryption key, frontend URL. If any variable is missing or malformed, the server refuses to start and logs exactly which variable is wrong. Prevents silent failures in production.</p></div>
+    </div>
+
+    <h3 style="color:var(--gold)">src/models/</h3>
+    <div class="grid-2" style="margin-bottom:32px">
+      <div class="card"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);margin-bottom:6px">models/Notice.js</div><p style="font-size:13px;margin:0">MongoDB schema for a notice. Required fields: PAN (10 chars), Assessment Year, Department (IT/GST), Notice Number, Due Date, Status (enum), PDF URL (S3 link), linked client ID, assigned staff ID. Timestamps auto-added. Indexes on status + dueDate for fast inbox sorting.</p></div>
+      <div class="card"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);margin-bottom:6px">models/User.js</div><p style="font-size:13px;margin:0">Schema for CA staff and admin accounts. Fields: name, email (unique), hashed password, role (enum: super_admin / staff), MFA secret (if enabled), linked client IDs, createdAt. The password field has select:false — it's excluded from all queries by default, requiring explicit .select('+password') to read it.</p></div>
+      <div class="card"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);margin-bottom:6px">models/AuditLog.js</div><p style="font-size:13px;margin:0">Schema for the forensic audit trail. Immutable records (no update/delete allowed). Fields: userId, userName, action (enum of all possible actions), entityType, entityId, ipAddress, userAgent, timestamp. TTL index not set — logs are permanent and never auto-deleted.</p></div>
+      <div class="card"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);margin-bottom:6px">models/Client.js</div><p style="font-size:13px;margin:0">Schema for CA's tax clients. Fields: fullName, PAN, entityType (enum), email, phone, portalCredentials (AES-256 encrypted JSON), assignedStaffId, createdAt. The portalCredentials field is always encrypted before save and decrypted on read — handled transparently in the service layer.</p></div>
+    </div>
+
+    <h3 style="color:var(--purple)">src/controllers/ & src/routes/</h3>
+    <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:32px">
+      <div class="card"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--purple);margin-bottom:6px">routes/ → controllers/ pattern</div><p style="font-size:13px;margin:0">Routes are thin: they map URL + method to a controller function. Example: <code style="background:var(--surface3);padding:2px 6px;border-radius:3px;font-size:11px">GET /api/notices → noticesController.getAll</code>. Controllers are also thin: they extract data from req, call a Service function for business logic, and send the formatted response. All heavy logic lives in Services — this makes testing and maintenance clean.</p></div>
+    </div>
+
+    <h3 style="color:var(--orange)">src/services/</h3>
+    <div class="grid-2" style="margin-bottom:32px">
+      <div class="card"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--orange);margin-bottom:6px">services/ai.service.js</div><p style="font-size:13px;margin:0">Wraps calls to the AI API (Claude/GPT). Two main functions: summarizeNotice(noticeText) → returns 3-point summary, and generateReply(noticeContext, documents) → returns draft letter. Handles API retries, timeout errors, and rate limit responses from the AI provider.</p></div>
+      <div class="card"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--orange);margin-bottom:6px">services/auth.service.js</div><p style="font-size:13px;margin:0">Handles all authentication logic: validateCredentials (bcrypt.compare), createToken (JWT sign), verifyToken (JWT verify), validateMFACode (TOTP verification). Keeps auth logic out of controllers — controllers just call these functions and trust the result.</p></div>
+      <div class="card"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--orange);margin-bottom:6px">services/encryption.service.js</div><p style="font-size:13px;margin:0">Two functions: encrypt(plaintext) → returns AES-256-GCM ciphertext + IV + authTag as a combined string, and decrypt(encryptedString) → returns original plaintext. Used exclusively for IT portal credentials. The encryption key is read from environment variables — never hardcoded in source code.</p></div>
+    </div>
+
+    <hr class="section-divider">
+    <h2>web/ — Every File Explained</h2>
+
+    <h3 style="color:var(--orange)">Core Files</h3>
+    <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:32px">
+      <div class="card"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--orange);margin-bottom:6px">src/index.js</div><p style="font-size:13px;margin:0">The browser entry point. Renders the root React component into the DOM's #root div. Also wraps the app in TanStack QueryClientProvider (for data caching) and BrowserRouter (for React Router navigation).</p></div>
+      <div class="card"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--orange);margin-bottom:6px">src/App.js</div><p style="font-size:13px;margin:0">The router configuration. Defines all URL routes: / → Dashboard, /notices → NoticeInbox, /calendar → NoticeCalendar, /clients → ClientList, /admin → AdminPanel, /client-portal → ClientPortal, /login → Login. Wraps most routes in &lt;ProtectedRoute&gt; to enforce authentication.</p></div>
+      <div class="card"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--orange);margin-bottom:6px">src/api/axios.js + endpoints.js</div><p style="font-size:13px;margin:0">axios.js creates the Axios instance with the backend base URL and adds a request interceptor that automatically reads the JWT from localStorage and adds it as Authorization: Bearer [token] to every outbound request. endpoints.js is a constants file mapping human-readable names to API URL strings — avoids hardcoding URLs throughout the codebase.</p></div>
+    </div>
+
+    <h3 style="color:var(--blue)">src/auth/</h3>
+    <div class="grid-2" style="margin-bottom:32px">
+      <div class="card"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--blue);margin-bottom:6px">auth/AuthContext.js</div><p style="font-size:13px;margin:0">React Context that holds the global authentication state: currentUser object, isAuthenticated boolean, login() function (stores JWT, sets user), and logout() function (clears JWT, resets state). Any component in the app can consume this context to check who is logged in without prop-drilling.</p></div>
+      <div class="card"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--blue);margin-bottom:6px">auth/ProtectedRoute.js</div><p style="font-size:13px;margin:0">A React wrapper component. Before rendering the child component, it checks AuthContext.isAuthenticated. If false, it immediately redirects the browser to /login using React Router's Navigate. Used to wrap every route that requires a logged-in user — one line of protection per route.</p></div>
+    </div>
+
+    <h3 style="color:var(--gold)">src/pages/</h3>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div class="card"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--red);margin-bottom:6px">pages/Admin/ — SuperAdmin Only</div><p style="font-size:13px;margin:0"><strong>AuditLogs.js / ForensicLogs.js:</strong> Fetches and displays the full AuditLog collection in a searchable, filterable table. Shows: user name, action, IP address, entity affected, timestamp. Super Admin only — all other roles are redirected by ProtectedRoute. <strong>UserManagement.js:</strong> Lists all staff accounts with ability to invite new users via email, change roles, and revoke access.</p></div>
+      <div class="card"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--orange);margin-bottom:6px">pages/Notices/ — The Core Feature</div><p style="font-size:13px;margin:0"><strong>NoticeInbox.js:</strong> Main notice list with filters and sort. <strong>NoticeDrawer.js:</strong> Slide-out panel with full notice details, AI summary, documents, activity log, and chat thread. <strong>NoticeCalendar.js:</strong> Full-page calendar using a calendar library, notices plotted by due date. <strong>QuickScanNotice.js:</strong> File upload page with OCR processing flow and auto-populated form fields.</p></div>
+      <div class="card"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--green);margin-bottom:6px">pages/Responses/ResponseStudio.js</div><p style="font-size:13px;margin:0">The AI drafting interface. Shows the notice summary on the left, attached documents in the middle, and the rich text editor for the AI-generated reply on the right. "Auto-Draft" button triggers the AI API call. Rich text editor supports bold, italic, tables, and lists. "Approve" generates the final PDF.</p></div>
+      <div class="card"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--purple);margin-bottom:6px">pages/ClientPortal/</div><p style="font-size:13px;margin:0"><strong>ClientDashboard.js:</strong> Simplified dashboard showing the client's notices in plain language with status indicators. No CA-specific features visible. <strong>ClientNoticeDetails.js:</strong> Individual notice page for the client — shows the pending Action Request, the upload interface, and the chat thread with their CA.</p></div>
+      <div class="card"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);margin-bottom:6px">pages/Tools/PortalSync.js</div><p style="font-size:13px;margin:0">The RPA trigger page. Allows CA admin to manually trigger a portal sync for specific clients on-demand (instead of waiting for the nightly schedule). Shows sync history: last sync time, number of new notices found, any errors encountered during the RPA process.</p></div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<script>
+function go(page) {
+  // update pages
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + page).classList.add('active');
+  // update nav
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.querySelector('[data-page="' + page + '"]').classList.add('active');
+  // scroll to top
+  document.querySelector('.main').scrollTop = 0;
+  window.scrollTo(0,0);
+  // close mobile sidebar
+  closeSidebar();
+}
+
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('overlay').classList.toggle('open');
+}
+function closeSidebar() {
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('overlay').classList.remove('open');
+}
+
+// keyboard nav
+document.addEventListener('keydown', e => {
+  const pages = ['overview','architecture','tech','features','dataflow','security','structure'];
+  const active = document.querySelector('.nav-item.active');
+  if(!active) return;
+  const cur = pages.indexOf(active.dataset.page);
+  if(e.key === 'ArrowRight' || e.key === 'ArrowDown') { if(cur < pages.length-1) go(pages[cur+1]); }
+  if(e.key === 'ArrowLeft' || e.key === 'ArrowUp') { if(cur > 0) go(pages[cur-1]); }
+});
+</script>
+</body>
+</html>

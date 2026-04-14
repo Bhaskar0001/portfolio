@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Tutor Booking System</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="auth-card">
+      <div class="auth-header">
+        <h1 id="auth-title">Welcome Back</h1>
+        <p id="auth-subtitle">Please login to access your dashboard</p>
+      </div>
+
+      <div id="alert"></div>
+
+      <!-- Login Form -->
+      <form id="login-form">
+        <div class="form-group">
+          <label for="login-email">Email Address</label>
+          <input type="email" id="login-email" class="form-input" placeholder="name@company.com" required>
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" class="form-input" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn-primary">Sign In</button>
+      </form>
+
+      <!-- Register Form -->
+      <form id="register-form" class="hidden">
+        <div class="form-group">
+          <label for="reg-name">Full Name</label>
+          <input type="text" id="reg-name" class="form-input" placeholder="John Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="reg-email">Email Address</label>
+          <input type="email" id="reg-email" class="form-input" placeholder="name@company.com" required>
+        </div>
+        
+        <label class="form-group" style="display:block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem; color: var(--text-dim);">I am a:</label>
+        <div class="role-selector">
+          <label class="role-option">
+            <input type="radio" name="role" value="tutor" checked>
+            <span class="role-label">Tutor</span>
+          </label>
+          <label class="role-option">
+            <input type="radio" name="role" value="sales">
+            <span class="role-label">Sales</span>
+          </label>
+        </div>
+
+        <div class="form-group" id="phone-group">
+          <label for="reg-phone">Phone Number (WhatsApp)</label>
+          <input type="tel" id="reg-phone" class="form-input" placeholder="+91 XXXXXXXXXX">
+        </div>
+
+        <div class="form-group">
+          <label for="reg-password">Password</label>
+          <input type="password" id="reg-password" class="form-input" placeholder="Minimum 6 characters" required minlength="6">
+        </div>
+        <button type="submit" class="btn-primary">Create Account</button>
+      </form>
+
+      <div class="auth-footer">
+        <span id="switch-text">Don't have an account?</span>
+        <a href="#" id="auth-toggle">Create one</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script>
+    const loginForm = document.getElementById('login-form');
+    const registerForm = document.getElementById('register-form');
+    const authToggle = document.getElementById('auth-toggle');
+    const authTitle = document.getElementById('auth-title');
+    const authSubtitle = document.getElementById('auth-subtitle');
+    const switchText = document.getElementById('switch-text');
+    const alertBox = document.getElementById('alert');
+    const roleRadios = document.getElementsByName('role');
+    const phoneGroup = document.getElementById('phone-group');
+
+    // Toggle between Login and Register
+    authToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isLogin = !loginForm.classList.contains('hidden');
+      
+      if (isLogin) {
+        loginForm.classList.add('hidden');
+        registerForm.classList.remove('hidden');
+        authTitle.innerText = 'Join Us';
+        authSubtitle.innerText = 'Create your account to get started';
+        switchText.innerText = 'Already have an account?';
+        authToggle.innerText = 'Sign in';
+      } else {
+        loginForm.classList.remove('hidden');
+        registerForm.classList.add('hidden');
+        authTitle.innerText = 'Welcome Back';
+        authSubtitle.innerText = 'Please login to access your dashboard';
+        switchText.innerText = "Don't have an account?";
+        authToggle.innerText = 'Create one';
+      }
+      alertBox.className = '';
+      alertBox.style.display = 'none';
+    });
+
+    // Toggle phone field visibility for role selection
+    roleRadios.forEach(radio => {
+      radio.addEventListener('change', (e) => {
+        if (e.target.value === 'tutor') {
+          phoneGroup.classList.remove('hidden');
+        } else {
+          phoneGroup.classList.add('hidden');
+        }
+      });
+    });
+
+    // Handle Login
+    loginForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('login-email').value;
+      const password = document.getElementById('login-password').value;
+
+      try {
+        const data = await auth.login(email, password);
+        showAlert('Login successful! Redirecting...', 'success');
+        setTimeout(() => {
+          window.location.href = data.user.role === 'tutor' 
+            ? 'tutor-dashboard.html' 
+            : 'sales-dashboard.html';
+        }, 1500);
+      } catch (err) {
+        showAlert(err.message, 'error');
+      }
+    });
+
+    // Handle Registration
+    registerForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const name = document.getElementById('reg-name').value;
+      const email = document.getElementById('reg-email').value;
+      const password = document.getElementById('reg-password').value;
+      const role = document.querySelector('input[name="role"]:checked').value;
+      const phoneNumber = document.getElementById('reg-phone').value;
+
+      try {
+        const data = await auth.register({ name, email, password, role, phoneNumber });
+        showAlert('Account created! Redirecting...', 'success');
+        setTimeout(() => {
+          window.location.href = data.user.role === 'tutor' 
+            ? 'tutor-dashboard.html' 
+            : 'sales-dashboard.html';
+        }, 1500);
+      } catch (err) {
+        showAlert(err.message, 'error');
+      }
+    });
+
+    function showAlert(msg, type) {
+      alertBox.innerText = msg;
+      alertBox.className = type;
+      alertBox.style.display = 'block';
+    }
+  </script>
+</body>
+</html>

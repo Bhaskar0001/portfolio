@@ -1,0 +1,839 @@
+2026-03-02 12:17:24,936 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-02 12:17:33,511 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-02 12:17:34,716 [INFO] watchfiles.main: 5 changes detected
+2026-03-02 12:17:36,539 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-02 12:17:36,539 [INFO] main: Scheduler started successfully.
+2026-03-02 12:17:36,539 [INFO] main: Application startup complete.
+2026-03-02 12:17:37,320 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-02 12:17:37,320 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-02 12:19:17,057 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-02 12:19:26,786 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-02 12:19:29,593 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-02 12:19:29,593 [INFO] main: Scheduler started successfully.
+2026-03-02 12:19:29,594 [INFO] main: Application startup complete.
+2026-03-02 12:19:30,373 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-02 12:19:30,373 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-02 12:25:32,468 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-02 12:25:40,272 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-02 12:25:42,970 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-02 12:25:42,970 [INFO] main: Scheduler started successfully.
+2026-03-02 12:25:42,970 [INFO] main: Application startup complete.
+2026-03-02 12:25:43,712 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-02 12:25:43,713 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-02 12:57:52,210 [INFO] watchfiles.main: 1 change detected
+2026-03-02 13:04:50,810 [INFO] watchfiles.main: 1 change detected
+2026-03-02 13:04:59,912 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-02 13:05:01,358 [INFO] watchfiles.main: 5 changes detected
+2026-03-02 13:05:03,129 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-02 13:05:03,130 [INFO] main: Scheduler started successfully.
+2026-03-02 13:05:03,130 [INFO] main: Application startup complete.
+2026-03-02 13:05:03,966 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-02 13:05:03,966 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-02 14:11:24,083 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-02 14:11:35,002 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-02 14:11:37,868 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-02 14:11:37,868 [INFO] main: Scheduler started successfully.
+2026-03-02 14:11:37,868 [INFO] main: Application startup complete.
+2026-03-02 14:11:38,702 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-02 14:11:38,703 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-02 14:27:55,085 [INFO] watchfiles.main: 1 change detected
+2026-03-02 14:37:34,182 [INFO] watchfiles.main: 7 changes detected
+2026-03-02 14:38:11,474 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-02 14:49:41,114 [INFO] watchfiles.main: 5 changes detected
+2026-03-02 14:49:43,235 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-02 14:49:43,318 [INFO] main: Scheduler started successfully.
+2026-03-02 14:49:43,331 [INFO] main: Application startup complete.
+2026-03-02 14:49:44,482 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-02 14:49:44,484 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-02 14:50:22,322 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-02 14:50:45,599 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-02 14:50:50,260 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-02 14:50:50,262 [INFO] main: Scheduler started successfully.
+2026-03-02 14:50:50,262 [INFO] main: Application startup complete.
+2026-03-02 14:50:51,104 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-02 14:50:51,104 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-02 15:30:56,466 [INFO] watchfiles.main: 1 change detected
+2026-03-02 15:37:48,404 [INFO] watchfiles.main: 3 changes detected
+2026-03-02 15:37:58,246 [INFO] watchfiles.main: 5 changes detected
+2026-03-02 15:38:16,300 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-02 15:38:21,536 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-02 15:38:21,537 [INFO] main: Scheduler started successfully.
+2026-03-02 15:38:21,537 [INFO] main: Application startup complete.
+2026-03-02 15:38:22,465 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-02 15:38:22,466 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-02 15:38:50,234 [INFO] watchfiles.main: 1 change detected
+2026-03-02 15:39:51,143 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-02 15:40:09,211 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-02 15:40:13,109 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-02 15:40:13,110 [INFO] main: Scheduler started successfully.
+2026-03-02 15:40:13,110 [INFO] main: Application startup complete.
+2026-03-02 15:40:13,842 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-02 15:40:13,843 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-02 15:43:06,021 [INFO] watchfiles.main: 1 change detected
+2026-03-02 15:43:21,548 [INFO] watchfiles.main: 1 change detected
+2026-03-02 15:43:46,277 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-02 15:43:50,300 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-02 15:43:50,302 [INFO] main: Scheduler started successfully.
+2026-03-02 15:43:50,302 [INFO] main: Application startup complete.
+2026-03-02 15:43:51,056 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-02 15:43:51,056 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-02 15:44:38,606 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-02 15:44:40,964 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-02 15:44:40,966 [INFO] main: Scheduler started successfully.
+2026-03-02 15:44:40,966 [INFO] main: Application startup complete.
+2026-03-02 15:44:41,668 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-02 15:44:41,670 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-02 15:45:38,493 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-02 15:45:41,020 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-02 15:45:41,021 [INFO] main: Scheduler started successfully.
+2026-03-02 15:45:41,021 [INFO] main: Application startup complete.
+2026-03-02 15:45:41,781 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-02 15:45:41,782 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-02 15:46:32,444 [INFO] main: Incoming login body: {"email":"desk@pro.com","password":"Desk@123","organization_id":"69a01f87346b7fcb4ef8a380"}
+2026-03-02 15:46:32,444 [INFO] main: --- Login attempt for 'desk@pro.com' ---
+2026-03-02 15:46:32,523 [INFO] main: User found in DB. Stored Org ID: 69a01f87346b7fcb4ef8a380
+2026-03-02 15:46:32,605 [INFO] main: Password verification successful.
+2026-03-02 15:46:32,606 [INFO] main: Checking Org Match: App sent '69a01f87346b7fcb4ef8a380', DB has '69a01f87346b7fcb4ef8a380'
+2026-03-02 15:46:32,606 [INFO] main: Organization match successful.
+2026-03-02 15:46:32,606 [INFO] main: Login process complete. Generating token.
+2026-03-02 15:53:02,944 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-02 15:53:05,365 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-02 15:53:05,366 [INFO] main: Scheduler started successfully.
+2026-03-02 15:53:05,366 [INFO] main: Application startup complete.
+2026-03-02 15:53:06,129 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-02 15:53:06,129 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-02 15:53:46,820 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-02 15:53:49,118 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-02 15:53:49,118 [INFO] main: Scheduler started successfully.
+2026-03-02 15:53:49,118 [INFO] main: Application startup complete.
+2026-03-02 15:53:49,936 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-02 15:53:49,936 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-02 15:54:45,036 [ERROR] main: Execution Error in smart_attendance: shapes (4096,) and (128,) not aligned: 4096 (dim 0) != 128 (dim 0)
+Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 672, in smart_attendance
+    if emp.get("face_embedding") and compare_faces(new_embedding, emp["face_embedding"]):
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\face_utils.py", line 90, in compare_faces
+    cos_sim = np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
+              ^^^^^^^^^^^^
+ValueError: shapes (4096,) and (128,) not aligned: 4096 (dim 0) != 128 (dim 0)
+2026-03-02 16:03:14,989 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-02 16:03:17,848 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-02 16:03:17,848 [INFO] main: Scheduler started successfully.
+2026-03-02 16:03:17,849 [INFO] main: Application startup complete.
+2026-03-02 16:03:18,631 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-02 16:03:18,631 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-02 16:16:02,239 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-02 16:16:04,836 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-02 16:16:04,836 [INFO] main: Scheduler started successfully.
+2026-03-02 16:16:04,836 [INFO] main: Application startup complete.
+2026-03-02 16:16:05,564 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-02 16:16:05,564 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-02 16:26:05,823 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-02 16:26:08,716 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-02 16:26:08,716 [INFO] main: Scheduler started successfully.
+2026-03-02 16:26:08,716 [INFO] main: Application startup complete. ENV=development
+2026-03-02 16:26:09,786 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-02 16:26:09,788 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-09 15:09:34,199 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-09 15:09:41,722 [WARNING] main: Index 'employees_email' skipped (non-fatal): ServerSelectionTimeoutError: SSL handshake failed: ac-gap5gtg-shard-00-02.acqnhdd.mongodb
+2026-03-09 15:09:46,771 [WARNING] main: Index 'attendance_logs' skipped (non-fatal): ServerSelectionTimeoutError: SSL handshake failed: ac-gap5gtg-shard-00-02.acqnhdd.mongodb
+2026-03-09 15:09:52,050 [WARNING] main: Index 'visit_plans' skipped (non-fatal): ServerSelectionTimeoutError: SSL handshake failed: ac-gap5gtg-shard-00-02.acqnhdd.mongodb
+2026-03-09 15:09:57,201 [WARNING] main: Index 'visit_logs' skipped (non-fatal): ServerSelectionTimeoutError: SSL handshake failed: ac-gap5gtg-shard-00-02.acqnhdd.mongodb
+2026-03-09 15:10:02,271 [WARNING] main: Index 'location_pings' skipped (non-fatal): ServerSelectionTimeoutError: SSL handshake failed: ac-gap5gtg-shard-00-02.acqnhdd.mongodb
+2026-03-09 15:10:07,339 [WARNING] main: Index 'km_reimbursements' skipped (non-fatal): ServerSelectionTimeoutError: SSL handshake failed: ac-gap5gtg-shard-00-02.acqnhdd.mongodb
+2026-03-09 15:10:07,342 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-09 15:10:07,342 [INFO] main: Scheduler started successfully.
+2026-03-09 15:10:07,342 [INFO] main: Application startup complete. ENV=development
+2026-03-09 15:10:12,429 [WARNING] main: Startup index creation skipped (non-fatal): ServerSelectionTimeoutError: SSL handshake failed: ac-gap5gtg-shard-00-02.acqnhdd.mongodb.net:27017: [SSL: TL
+2026-03-09 15:10:12,429 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-09 15:15:55,484 [INFO] main: Incoming login body: {"email":"desk@pro.com","password":"Desk@123"}
+2026-03-09 15:15:55,485 [INFO] main: --- Login attempt for 'desk@pro.com' ---
+2026-03-09 15:17:40,008 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-09 15:17:46,773 [WARNING] main: Index 'employees_email' skipped (non-fatal): ServerSelectionTimeoutError: SSL handshake failed: ac-gap5gtg-shard-00-02.acqnhdd.mongodb
+2026-03-09 15:17:51,935 [WARNING] main: Index 'attendance_logs' skipped (non-fatal): ServerSelectionTimeoutError: SSL handshake failed: ac-gap5gtg-shard-00-02.acqnhdd.mongodb
+2026-03-09 15:17:57,149 [WARNING] main: Index 'visit_plans' skipped (non-fatal): ServerSelectionTimeoutError: SSL handshake failed: ac-gap5gtg-shard-00-02.acqnhdd.mongodb
+2026-03-09 15:18:02,234 [WARNING] main: Index 'visit_logs' skipped (non-fatal): ServerSelectionTimeoutError: SSL handshake failed: ac-gap5gtg-shard-00-02.acqnhdd.mongodb
+2026-03-09 15:18:07,375 [WARNING] main: Index 'location_pings' skipped (non-fatal): ServerSelectionTimeoutError: SSL handshake failed: ac-gap5gtg-shard-00-02.acqnhdd.mongodb
+2026-03-09 15:18:12,402 [WARNING] main: Index 'km_reimbursements' skipped (non-fatal): ServerSelectionTimeoutError: SSL handshake failed: ac-gap5gtg-shard-00-02.acqnhdd.mongodb
+2026-03-09 15:18:12,404 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-09 15:18:12,404 [INFO] main: Scheduler started successfully.
+2026-03-09 15:18:12,404 [INFO] main: Application startup complete. ENV=development
+2026-03-09 15:18:17,442 [WARNING] main: Startup index creation skipped (non-fatal): ServerSelectionTimeoutError: SSL handshake failed: ac-gap5gtg-shard-00-02.acqnhdd.mongodb.net:27017: [SSL: TL
+2026-03-09 15:18:17,442 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-09 15:20:17,552 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-09 15:20:19,783 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-09 15:20:19,783 [INFO] main: Scheduler started successfully.
+2026-03-09 15:20:19,783 [INFO] main: Application startup complete. ENV=development
+2026-03-09 15:20:20,549 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-09 15:20:20,549 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-09 15:20:58,749 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-09 15:21:01,304 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-09 15:21:01,304 [INFO] main: Scheduler started successfully.
+2026-03-09 15:21:01,304 [INFO] main: Application startup complete. ENV=development
+2026-03-09 15:21:02,125 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-09 15:21:02,125 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-09 15:21:07,772 [INFO] main: Incoming login body: {"email":"desk@pro.com","password":"Desk@123"}
+2026-03-09 15:21:07,773 [INFO] main: --- Login attempt for 'desk@pro.com' ---
+2026-03-09 15:21:07,856 [INFO] main: User found in DB. Stored Org ID: 69a01f87346b7fcb4ef8a380
+2026-03-09 15:21:07,908 [INFO] main: Password verification successful.
+2026-03-09 15:21:07,909 [INFO] main: Organization match successful.
+2026-03-09 15:21:07,909 [INFO] main: Login process complete. Generating token.
+2026-03-09 15:40:23,964 [INFO] main: Incoming login body: {"email":"desk@pro.com","password":"Desk@123"}
+2026-03-09 15:40:23,969 [INFO] main: --- Login attempt for 'desk@pro.com' ---
+2026-03-09 15:40:24,032 [INFO] main: User found in DB. Stored Org ID: 69a01f87346b7fcb4ef8a380
+2026-03-09 15:40:24,145 [INFO] main: Password verification successful.
+2026-03-09 15:40:24,146 [INFO] main: Organization match successful.
+2026-03-09 15:40:24,147 [INFO] main: Login process complete. Generating token.
+2026-03-09 16:16:12,666 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-09 16:16:18,070 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-09 16:16:18,071 [INFO] main: Scheduler started successfully.
+2026-03-09 16:16:18,071 [INFO] main: Application startup complete. ENV=development
+2026-03-09 16:16:18,872 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-09 16:16:18,873 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-09 16:17:36,156 [INFO] main: Incoming login body: {"email":"agent@pro.com","password":"Agent@123","organization_id":"69a01f87346b7fcb4ef8a380","device_id":"Galaxy M52 5G-1773053255133"}
+2026-03-09 16:17:36,156 [INFO] main: --- Login attempt for 'agent@pro.com' ---
+2026-03-09 16:17:36,223 [INFO] main: User found in DB. Stored Org ID: 69a01f87346b7fcb4ef8a380
+2026-03-09 16:17:36,323 [INFO] main: Password verification successful.
+2026-03-09 16:17:36,325 [INFO] main: Checking Org Match: App sent '69a01f87346b7fcb4ef8a380', DB has '69a01f87346b7fcb4ef8a380'
+2026-03-09 16:17:36,325 [INFO] main: Organization match successful.
+2026-03-09 16:17:36,325 [WARNING] main: Login failed: Device binding mismatch. App: Galaxy M52 5G-1773053255133, DB: narzo 50A-1772434795676
+2026-03-09 16:18:25,404 [INFO] main: Incoming login body: {"email":"agent1@v2.com","password":"V2Agent123!","organization_id":"69a01f87346b7fcb4ef8a380","device_id":"Galaxy M52 5G-1773053255133"}
+2026-03-09 16:18:25,406 [INFO] main: --- Login attempt for 'agent1@v2.com' ---
+2026-03-09 16:18:25,471 [INFO] main: User found in DB. Stored Org ID: 69a030d6346b7fcb4ef8a39a
+2026-03-09 16:18:25,577 [INFO] main: Password verification successful.
+2026-03-09 16:18:25,578 [INFO] main: Checking Org Match: App sent '69a01f87346b7fcb4ef8a380', DB has '69a030d6346b7fcb4ef8a39a'
+2026-03-09 16:18:25,578 [WARNING] main: Login failed: Org mismatch. App: 69a01f87346b7fcb4ef8a380, DB: 69a030d6346b7fcb4ef8a39a
+2026-03-09 16:19:08,414 [INFO] main: Incoming login body: {"email":"agent1@v2.com","password":"V2Agent123!","organization_id":"69a030d6346b7fcb4ef8a39a","device_id":"Galaxy M52 5G-1773053255133"}
+2026-03-09 16:19:08,426 [INFO] main: --- Login attempt for 'agent1@v2.com' ---
+2026-03-09 16:19:08,484 [INFO] main: User found in DB. Stored Org ID: 69a030d6346b7fcb4ef8a39a
+2026-03-09 16:19:08,598 [INFO] main: Password verification successful.
+2026-03-09 16:19:08,598 [INFO] main: Checking Org Match: App sent '69a030d6346b7fcb4ef8a39a', DB has '69a030d6346b7fcb4ef8a39a'
+2026-03-09 16:19:08,598 [INFO] main: Organization match successful.
+2026-03-09 16:19:08,599 [INFO] main: Binding user agent1@v2.com to device Galaxy M52 5G-1773053255133
+2026-03-09 16:19:08,672 [INFO] main: Login process complete. Generating token.
+2026-03-09 16:25:27,451 [ERROR] asyncio: Task exception was never retrieved
+future: <Task finished name='Task-50' coro=<IocpProactor.accept.<locals>.accept_coro() done, defined at C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py:558> exception=OSError(22, 'The specified network name is no longer available', None, 64, None)>
+Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 561, in accept_coro
+    await future
+  File "C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 798, in _poll
+    value = callback(transferred, key, ov)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 550, in finish_accept
+    ov.getresult()
+OSError: [WinError 64] The specified network name is no longer available
+2026-03-09 16:25:28,910 [ERROR] asyncio: Accept failed on a socket
+socket: <asyncio.TransportSocket fd=3676, family=2, type=1, proto=6, laddr=('0.0.0.0', 8001)>
+Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 844, in loop
+    conn, addr = f.result()
+                 ^^^^^^^^^^
+OSError: [WinError 64] The specified network name is no longer available
+2026-03-09 16:51:43,237 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-09 16:51:49,373 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-09 16:51:49,374 [INFO] main: Scheduler started successfully.
+2026-03-09 16:51:49,375 [INFO] main: Application startup complete. ENV=development
+2026-03-09 16:51:50,179 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-09 16:51:50,179 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-10 11:23:35,325 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-10 11:23:38,742 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-10 11:23:38,742 [INFO] main: Scheduler started successfully.
+2026-03-10 11:23:38,743 [INFO] main: Application startup complete. ENV=development
+2026-03-10 11:23:39,578 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-10 11:23:39,578 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-10 11:29:28,617 [INFO] main: Processing check-in for test_agent@example.com (Role: FIELD)
+2026-03-10 11:30:05,000 [INFO] main: Processing check-in for test_agent@example.com (Role: FIELD)
+2026-03-10 11:30:18,095 [ERROR] face_utils: Error generating embedding: Face could not be detected in C:\Users\BHASKA~1\AppData\Local\Temp\tmpt2wbob5e.jpg.Please confirm that the picture is a face photo or consider to set enforce_detection param to False.
+2026-03-10 12:10:34,623 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-10 12:10:38,468 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-10 12:10:38,470 [INFO] main: Scheduler started successfully.
+2026-03-10 12:10:38,470 [INFO] main: Application startup complete. ENV=development
+2026-03-10 12:10:39,332 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-10 12:10:39,332 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-10 12:11:07,778 [INFO] main: Processing check-in for test_agent@example.com (Role: FIELD)
+2026-03-10 12:11:07,840 [ERROR] main: Execution Error in smart_attendance: cannot access local variable 'office_lat' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 813, in smart_attendance
+    t_lat = user.get("territory_center_lat", office_lat) # Fallback to office if not set
+                                             ^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'office_lat' where it is not associated with a value
+2026-03-10 12:11:40,396 [INFO] main: Processing check-in for test_agent@example.com (Role: FIELD)
+2026-03-10 12:11:40,476 [ERROR] main: Execution Error in smart_attendance: cannot access local variable 'office_lat' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 813, in smart_attendance
+    territory_type = user.get("territory_type", TerritoryType.RADIUS)
+                                                 ^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'office_lat' where it is not associated with a value
+2026-03-10 12:13:07,128 [INFO] main: Processing check-in for test_agent@example.com (Role: FIELD)
+2026-03-10 12:13:07,203 [ERROR] main: Execution Error in smart_attendance: cannot access local variable 'office_lat' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 813, in smart_attendance
+    # Validate Territory
+                         
+UnboundLocalError: cannot access local variable 'office_lat' where it is not associated with a value
+2026-03-10 12:14:08,796 [INFO] main: Processing check-in for test_agent@example.com (Role: FIELD)
+2026-03-10 12:14:08,857 [ERROR] main: Execution Error in smart_attendance: cannot access local variable 'office_lat' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 813, in smart_attendance
+    # Validate Territory
+                         
+UnboundLocalError: cannot access local variable 'office_lat' where it is not associated with a value
+2026-03-10 12:31:56,192 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-10 12:31:59,165 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-10 12:31:59,166 [INFO] main: Scheduler started successfully.
+2026-03-10 12:31:59,166 [INFO] main: Application startup complete. ENV=development
+2026-03-10 12:31:59,934 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-10 12:31:59,934 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-10 12:32:09,704 [INFO] main: Processing check-in for test_agent@example.com (Role: FIELD)
+2026-03-10 12:32:09,842 [WARNING] sheets_sync: Google Sheets sync skipped: GOOGLE_SHEET_ID or SERVICE_ACCOUNT_JSON_PATH not configured.
+2026-03-10 12:41:41,727 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-10 12:41:45,052 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-10 12:41:45,052 [INFO] main: Scheduler started successfully.
+2026-03-10 12:41:45,052 [INFO] main: Application startup complete. ENV=development
+2026-03-10 12:41:45,798 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-10 12:41:45,799 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-10 12:42:00,101 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 12:42:00,101 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 12:42:00,163 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 12:42:00,163 [WARNING] main: Login failed: Password mismatch for 'test_agent@example.com'.
+2026-03-10 12:42:29,210 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 12:42:29,210 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 12:42:29,280 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 12:42:29,280 [WARNING] main: Login failed: Password mismatch for 'test_agent@example.com'.
+2026-03-10 12:44:33,911 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 12:44:33,911 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 12:44:33,972 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 12:44:34,039 [INFO] main: Password verification successful.
+2026-03-10 12:44:34,039 [INFO] main: Organization match successful.
+2026-03-10 12:44:34,039 [INFO] main: Login process complete. Generating token.
+2026-03-10 12:44:34,108 [ERROR] main: Login Response Validation Failed: 1 validation error for LoginResponse
+user.employee_type
+  Input should be 'desk', 'field' or 'office' [type=enum, input_value='FIELD', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/enum
+Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 577, in login
+    return LoginResponse(**response_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\pydantic\main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for LoginResponse
+user.employee_type
+  Input should be 'desk', 'field' or 'office' [type=enum, input_value='FIELD', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/enum
+2026-03-10 12:45:18,060 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 12:45:18,061 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 12:45:18,123 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 12:45:18,188 [INFO] main: Password verification successful.
+2026-03-10 12:45:18,188 [INFO] main: Organization match successful.
+2026-03-10 12:45:18,188 [INFO] main: Login process complete. Generating token.
+2026-03-10 12:45:30,157 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 12:45:30,157 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 12:45:30,222 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 12:45:30,289 [INFO] main: Password verification successful.
+2026-03-10 12:45:30,289 [INFO] main: Organization match successful.
+2026-03-10 12:45:30,289 [INFO] main: Login process complete. Generating token.
+2026-03-10 12:45:30,987 [ERROR] main: Check-in failed: 'place_name'
+2026-03-10 12:46:41,577 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-10 12:46:44,200 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-10 12:46:44,200 [INFO] main: Scheduler started successfully.
+2026-03-10 12:46:44,200 [INFO] main: Application startup complete. ENV=development
+2026-03-10 12:46:44,979 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-10 12:46:44,979 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-10 12:47:08,621 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 12:47:08,621 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 12:47:08,682 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 12:47:08,752 [INFO] main: Password verification successful.
+2026-03-10 12:47:08,752 [INFO] main: Organization match successful.
+2026-03-10 12:47:08,752 [INFO] main: Login process complete. Generating token.
+2026-03-10 12:47:09,867 [ERROR] main: Check-out failed: name 'background_tasks' is not defined
+2026-03-10 12:48:21,838 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-10 12:48:24,289 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-10 12:48:24,289 [INFO] main: Scheduler started successfully.
+2026-03-10 12:48:24,289 [INFO] main: Application startup complete. ENV=development
+2026-03-10 12:48:25,048 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-10 12:48:25,048 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-10 12:48:32,551 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 12:48:32,551 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 12:48:32,606 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 12:48:32,668 [INFO] main: Password verification successful.
+2026-03-10 12:48:32,669 [INFO] main: Organization match successful.
+2026-03-10 12:48:32,669 [INFO] main: Login process complete. Generating token.
+2026-03-10 12:48:33,717 [WARNING] sheets_sync: Visit Google Sheets sync skipped: credentials not configured.
+2026-03-10 12:50:33,604 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 12:50:33,604 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 12:50:33,660 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 12:50:33,726 [INFO] main: Password verification successful.
+2026-03-10 12:50:33,726 [INFO] main: Organization match successful.
+2026-03-10 12:50:33,727 [INFO] main: Login process complete. Generating token.
+2026-03-10 12:52:30,394 [INFO] main: Incoming login body: {"email": "test_manager@example.com", "password": "test_password123"}
+2026-03-10 12:52:30,394 [INFO] main: --- Login attempt for 'test_manager@example.com' ---
+2026-03-10 12:52:30,468 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 12:52:30,533 [INFO] main: Password verification successful.
+2026-03-10 12:52:30,533 [INFO] main: Organization match successful.
+2026-03-10 12:52:30,533 [INFO] main: Login process complete. Generating token.
+2026-03-10 12:52:30,890 [INFO] main: Manager nudge sent by test_manager@example.com to ['test_agent@example.com']: [general] Don't forget to sync your visit logs before EOD.
+2026-03-10 12:52:30,893 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 12:52:30,893 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 12:52:30,952 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 12:52:31,021 [INFO] main: Password verification successful.
+2026-03-10 12:52:31,021 [INFO] main: Organization match successful.
+2026-03-10 12:52:31,021 [INFO] main: Login process complete. Generating token.
+2026-03-10 13:01:00,671 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 13:01:00,671 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 13:01:00,742 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 13:01:00,818 [INFO] main: Password verification successful.
+2026-03-10 13:01:00,818 [INFO] main: Organization match successful.
+2026-03-10 13:01:00,818 [INFO] main: Login process complete. Generating token.
+2026-03-10 13:02:58,914 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 13:02:58,914 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 13:02:59,004 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 13:02:59,068 [INFO] main: Password verification successful.
+2026-03-10 13:02:59,069 [INFO] main: Organization match successful.
+2026-03-10 13:02:59,069 [INFO] main: Login process complete. Generating token.
+2026-03-10 13:02:59,239 [INFO] main: Processing check-in for test_agent@example.com (Role: field)
+2026-03-10 13:08:24,050 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 13:08:24,050 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 13:08:24,128 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 13:08:24,191 [INFO] main: Password verification successful.
+2026-03-10 13:08:24,191 [INFO] main: Organization match successful.
+2026-03-10 13:08:24,191 [INFO] main: Login process complete. Generating token.
+2026-03-10 13:08:24,331 [INFO] main: Processing check-in for test_agent@example.com (Role: field)
+2026-03-10 13:08:56,384 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 13:08:56,385 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 13:08:56,453 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 13:08:56,524 [INFO] main: Password verification successful.
+2026-03-10 13:08:56,525 [INFO] main: Organization match successful.
+2026-03-10 13:08:56,525 [INFO] main: Login process complete. Generating token.
+2026-03-10 13:08:56,663 [INFO] main: Processing check-in for test_agent@example.com (Role: field)
+2026-03-10 13:09:18,138 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 13:09:18,138 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 13:09:18,211 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 13:09:18,276 [INFO] main: Password verification successful.
+2026-03-10 13:09:18,276 [INFO] main: Organization match successful.
+2026-03-10 13:09:18,276 [INFO] main: Login process complete. Generating token.
+2026-03-10 13:09:18,439 [INFO] main: Processing check-in for test_agent@example.com (Role: field)
+2026-03-10 13:10:33,950 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 13:10:33,950 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 13:10:34,021 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 13:10:34,144 [INFO] main: Password verification successful.
+2026-03-10 13:10:34,144 [INFO] main: Organization match successful.
+2026-03-10 13:10:34,145 [INFO] main: Login process complete. Generating token.
+2026-03-10 13:10:34,307 [INFO] main: Processing check-in for test_agent@example.com (Role: field)
+2026-03-10 13:11:23,186 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 13:11:23,186 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 13:11:23,243 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 13:11:23,310 [INFO] main: Password verification successful.
+2026-03-10 13:11:23,310 [INFO] main: Organization match successful.
+2026-03-10 13:11:23,310 [INFO] main: Login process complete. Generating token.
+2026-03-10 13:11:23,434 [INFO] main: Processing check-in for test_agent@example.com (Role: field)
+2026-03-10 13:13:17,824 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 13:13:17,824 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 13:13:17,904 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 13:13:17,971 [INFO] main: Password verification successful.
+2026-03-10 13:13:17,971 [INFO] main: Organization match successful.
+2026-03-10 13:13:17,971 [INFO] main: Login process complete. Generating token.
+2026-03-10 13:13:18,109 [INFO] main: Processing check-in for test_agent@example.com (Role: field)
+2026-03-10 13:15:12,113 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 13:15:12,113 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 13:15:12,197 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 13:15:12,266 [INFO] main: Password verification successful.
+2026-03-10 13:15:12,266 [INFO] main: Organization match successful.
+2026-03-10 13:15:12,266 [INFO] main: Login process complete. Generating token.
+2026-03-10 13:15:12,413 [INFO] main: Processing check-in for test_agent@example.com (Role: field)
+2026-03-10 13:15:59,862 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 13:15:59,862 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 13:15:59,953 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 13:16:00,011 [INFO] main: Password verification successful.
+2026-03-10 13:16:00,012 [INFO] main: Organization match successful.
+2026-03-10 13:16:00,012 [INFO] main: Login process complete. Generating token.
+2026-03-10 13:16:00,133 [INFO] main: Processing check-in for test_agent@example.com (Role: field)
+2026-03-10 13:16:35,214 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 13:16:35,215 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 13:16:35,278 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 13:16:35,350 [INFO] main: Password verification successful.
+2026-03-10 13:16:35,350 [INFO] main: Organization match successful.
+2026-03-10 13:16:35,351 [INFO] main: Login process complete. Generating token.
+2026-03-10 13:16:35,468 [INFO] main: Processing check-in for test_agent@example.com (Role: field)
+2026-03-10 13:17:08,607 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 13:17:08,607 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 13:17:08,678 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 13:17:08,745 [INFO] main: Password verification successful.
+2026-03-10 13:17:08,746 [INFO] main: Organization match successful.
+2026-03-10 13:17:08,746 [INFO] main: Login process complete. Generating token.
+2026-03-10 13:17:08,877 [INFO] main: Processing check-in for test_agent@example.com (Role: field)
+2026-03-10 13:18:16,396 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 13:18:16,396 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 13:18:16,456 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 13:18:16,524 [INFO] main: Password verification successful.
+2026-03-10 13:18:16,524 [INFO] main: Organization match successful.
+2026-03-10 13:18:16,524 [INFO] main: Login process complete. Generating token.
+2026-03-10 13:18:16,672 [INFO] main: Processing check-in for test_agent@example.com (Role: field)
+2026-03-10 13:39:32,010 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-10 13:39:35,103 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-10 13:39:35,103 [INFO] main: Scheduler started successfully.
+2026-03-10 13:39:35,103 [INFO] main: Application startup complete. ENV=development
+2026-03-10 13:39:35,967 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-10 13:39:35,967 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-10 13:42:12,826 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 13:42:12,828 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 13:42:12,884 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 13:42:12,969 [INFO] main: Password verification successful.
+2026-03-10 13:42:12,969 [INFO] main: Organization match successful.
+2026-03-10 13:42:12,969 [INFO] main: Login process complete. Generating token.
+2026-03-10 13:42:13,118 [INFO] main: Processing check-in for test_agent@example.com (Role: field)
+2026-03-10 13:43:11,993 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 13:43:11,993 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 13:43:12,056 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 13:43:12,121 [INFO] main: Password verification successful.
+2026-03-10 13:43:12,121 [INFO] main: Organization match successful.
+2026-03-10 13:43:12,121 [INFO] main: Login process complete. Generating token.
+2026-03-10 13:43:12,260 [INFO] main: Processing check-in for test_agent@example.com (Role: field)
+2026-03-10 13:44:07,864 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-10 13:44:10,623 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-10 13:44:10,623 [INFO] main: Scheduler started successfully.
+2026-03-10 13:44:10,623 [INFO] main: Application startup complete. ENV=development
+2026-03-10 13:44:11,372 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-10 13:44:11,372 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-10 13:44:33,020 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 13:44:33,021 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 13:44:33,068 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 13:44:33,135 [INFO] main: Password verification successful.
+2026-03-10 13:44:33,136 [INFO] main: Organization match successful.
+2026-03-10 13:44:33,136 [INFO] main: Login process complete. Generating token.
+2026-03-10 13:44:33,272 [INFO] main: Processing check-in for test_agent@example.com (Role: field)
+2026-03-10 13:44:35,230 [ERROR] main: Inner loop error for test_agent@example.com: 'visit_id'
+2026-03-10 13:47:52,864 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-10 13:47:55,200 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-10 13:47:55,200 [INFO] main: Scheduler started successfully.
+2026-03-10 13:47:55,201 [INFO] main: Application startup complete. ENV=development
+2026-03-10 13:47:55,994 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-10 13:47:55,994 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-10 13:48:11,590 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 13:48:11,590 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 13:48:11,681 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 13:48:11,745 [INFO] main: Password verification successful.
+2026-03-10 13:48:11,745 [INFO] main: Organization match successful.
+2026-03-10 13:48:11,746 [INFO] main: Login process complete. Generating token.
+2026-03-10 13:48:11,894 [INFO] main: Processing check-in for test_agent@example.com (Role: field)
+2026-03-10 13:48:13,900 [INFO] main: Agent test_manager@example.com status calculated: Inactive, ping_exists: False
+2026-03-10 13:48:14,030 [ERROR] main: Inner loop error for test_agent@example.com: 'visit_id'
+2026-03-10 13:52:45,918 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-10 13:52:48,327 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-10 13:52:48,327 [INFO] main: Scheduler started successfully.
+2026-03-10 13:52:48,327 [INFO] main: Application startup complete. ENV=development
+2026-03-10 13:52:49,073 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-10 13:52:49,073 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-10 13:53:11,248 [INFO] main: Incoming login body: {"email": "test_agent@example.com", "password": "test_password123"}
+2026-03-10 13:53:11,248 [INFO] main: --- Login attempt for 'test_agent@example.com' ---
+2026-03-10 13:53:11,301 [INFO] main: User found in DB. Stored Org ID: 6995f2357aebe79f0c459532
+2026-03-10 13:53:11,374 [INFO] main: Password verification successful.
+2026-03-10 13:53:11,374 [INFO] main: Organization match successful.
+2026-03-10 13:53:11,374 [INFO] main: Login process complete. Generating token.
+2026-03-10 13:53:11,496 [INFO] main: Processing check-in for test_agent@example.com (Role: field)
+2026-03-10 15:08:33,010 [INFO] main: Incoming login body: {"email": "test_onboard@example.com", "password": "EMP-TEST-999", "device_id": "test_device_1"}
+2026-03-10 15:08:33,022 [INFO] main: --- Login attempt for 'test_onboard@example.com' ---
+2026-03-10 15:08:33,137 [INFO] main: User found in DB. Stored Org ID: test_org
+2026-03-10 15:08:33,501 [INFO] main: Password verification successful.
+2026-03-10 15:08:33,501 [INFO] main: Organization match successful.
+2026-03-10 15:08:33,502 [INFO] main: Binding user test_onboard@example.com to device test_device_1
+2026-03-10 15:08:33,580 [INFO] main: Login process complete. Generating token.
+2026-03-10 15:10:27,639 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-10 15:32:36,866 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-10 15:32:52,305 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-10 15:32:55,128 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-10 15:32:55,128 [INFO] main: Scheduler started successfully.
+2026-03-10 15:32:55,128 [INFO] main: Application startup complete. ENV=development
+2026-03-10 15:32:55,878 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-10 15:32:55,878 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-10 15:37:50,269 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-10 15:37:52,946 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-10 15:37:52,946 [INFO] main: Scheduler started successfully.
+2026-03-10 15:37:52,947 [INFO] main: Application startup complete. ENV=development
+2026-03-10 15:37:53,815 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-10 15:37:53,815 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-10 15:38:14,382 [INFO] main: Incoming login body: {"email": "test_onboard@example.com", "password": "EMP-TEST-999", "device_id": "test_device_1"}
+2026-03-10 15:38:14,382 [INFO] main: --- Login attempt for 'test_onboard@example.com' ---
+2026-03-10 15:38:14,442 [INFO] main: User found in DB. Stored Org ID: test_org
+2026-03-10 15:38:14,511 [INFO] main: Password verification successful.
+2026-03-10 15:38:14,511 [INFO] main: Organization match successful.
+2026-03-10 15:38:14,511 [INFO] main: Binding user test_onboard@example.com to device test_device_1
+2026-03-10 15:38:14,574 [INFO] main: Login process complete. Generating token.
+2026-03-10 15:38:14,978 [INFO] main: Incoming login body: {"email": "test_onboard@example.com", "password": "newSecurePassword123", "device_id": "test_device_1"}
+2026-03-10 15:38:14,978 [INFO] main: --- Login attempt for 'test_onboard@example.com' ---
+2026-03-10 15:38:15,052 [INFO] main: User found in DB. Stored Org ID: test_org
+2026-03-10 15:38:15,114 [INFO] main: Password verification successful.
+2026-03-10 15:38:15,114 [INFO] main: Organization match successful.
+2026-03-10 15:38:15,115 [INFO] main: Login process complete. Generating token.
+2026-03-10 15:41:49,294 [INFO] main: Incoming login body: {"email": "fake@test.com", "password": "fake"}
+2026-03-10 15:41:49,294 [INFO] main: --- Login attempt for 'fake@test.com' ---
+2026-03-10 15:41:49,366 [WARNING] main: Login failed: User 'fake@test.com' not found.
+2026-03-10 15:44:59,569 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-10 15:45:02,188 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-10 15:45:02,188 [INFO] main: Scheduler started successfully.
+2026-03-10 15:45:02,188 [INFO] main: Application startup complete. ENV=development
+2026-03-10 15:45:02,998 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-10 15:45:02,998 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-10 16:08:49,039 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-10 16:08:54,376 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-10 16:08:54,377 [INFO] main: Scheduler started successfully.
+2026-03-10 16:08:54,377 [INFO] main: Application startup complete. ENV=development
+2026-03-10 16:08:55,159 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-10 16:08:55,160 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-11 12:00:13,991 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-11 12:00:17,661 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-11 12:00:17,661 [INFO] main: Scheduler started successfully.
+2026-03-11 12:00:17,662 [INFO] main: Application startup complete. ENV=development
+2026-03-11 12:00:18,434 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-11 12:00:18,434 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-11 13:57:37,841 [ERROR] main: TOP LEVEL LIVE STATUS ERROR: Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 2952, in get_field_live_status
+    """Stub for PDF export."""
+                      ^^^^^^^^^
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 1594, in get_employee_filter
+    )
+      
+AttributeError: 'dict' object has no attribute 'organization_id'
+
+2026-03-11 13:57:37,935 [ERROR] main: TOP LEVEL LIVE STATUS ERROR: Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 2952, in get_field_live_status
+    """Stub for PDF export."""
+                      ^^^^^^^^^
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 1594, in get_employee_filter
+    )
+      
+AttributeError: 'dict' object has no attribute 'organization_id'
+
+2026-03-11 13:57:38,943 [ERROR] main: TOP LEVEL LIVE STATUS ERROR: Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 2952, in get_field_live_status
+    """Stub for PDF export."""
+                      ^^^^^^^^^
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 1594, in get_employee_filter
+    )
+      
+AttributeError: 'dict' object has no attribute 'organization_id'
+
+2026-03-11 13:57:39,041 [ERROR] main: TOP LEVEL LIVE STATUS ERROR: Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 2952, in get_field_live_status
+    """Stub for PDF export."""
+                      ^^^^^^^^^
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 1594, in get_employee_filter
+    )
+      
+AttributeError: 'dict' object has no attribute 'organization_id'
+
+2026-03-11 13:57:41,043 [ERROR] main: TOP LEVEL LIVE STATUS ERROR: Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 2952, in get_field_live_status
+    """Stub for PDF export."""
+                      ^^^^^^^^^
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 1594, in get_employee_filter
+    )
+      
+AttributeError: 'dict' object has no attribute 'organization_id'
+
+2026-03-11 13:57:41,391 [ERROR] main: TOP LEVEL LIVE STATUS ERROR: Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 2952, in get_field_live_status
+    """Stub for PDF export."""
+                      ^^^^^^^^^
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 1594, in get_employee_filter
+    )
+      
+AttributeError: 'dict' object has no attribute 'organization_id'
+
+2026-03-11 13:57:47,463 [ERROR] main: TOP LEVEL LIVE STATUS ERROR: Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 2952, in get_field_live_status
+    """Stub for PDF export."""
+                      ^^^^^^^^^
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 1594, in get_employee_filter
+    )
+      
+AttributeError: 'dict' object has no attribute 'organization_id'
+
+2026-03-11 13:57:48,612 [ERROR] main: TOP LEVEL LIVE STATUS ERROR: Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 2952, in get_field_live_status
+    """Stub for PDF export."""
+                      ^^^^^^^^^
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 1594, in get_employee_filter
+    )
+      
+AttributeError: 'dict' object has no attribute 'organization_id'
+
+2026-03-11 13:57:50,702 [ERROR] main: TOP LEVEL LIVE STATUS ERROR: Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 2952, in get_field_live_status
+    """Stub for PDF export."""
+                      ^^^^^^^^^
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 1594, in get_employee_filter
+    )
+      
+AttributeError: 'dict' object has no attribute 'organization_id'
+
+2026-03-11 13:57:57,762 [ERROR] main: TOP LEVEL LIVE STATUS ERROR: Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 2952, in get_field_live_status
+    """Stub for PDF export."""
+                      ^^^^^^^^^
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 1594, in get_employee_filter
+    )
+      
+AttributeError: 'dict' object has no attribute 'organization_id'
+
+2026-03-11 13:57:58,869 [ERROR] main: TOP LEVEL LIVE STATUS ERROR: Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 2952, in get_field_live_status
+    """Stub for PDF export."""
+                      ^^^^^^^^^
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 1594, in get_employee_filter
+    )
+      
+AttributeError: 'dict' object has no attribute 'organization_id'
+
+2026-03-11 13:58:00,968 [ERROR] main: TOP LEVEL LIVE STATUS ERROR: Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 2952, in get_field_live_status
+    """Stub for PDF export."""
+                      ^^^^^^^^^
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 1594, in get_employee_filter
+    )
+      
+AttributeError: 'dict' object has no attribute 'organization_id'
+
+2026-03-11 13:58:07,458 [ERROR] main: TOP LEVEL LIVE STATUS ERROR: Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 2952, in get_field_live_status
+    """Stub for PDF export."""
+                      ^^^^^^^^^
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 1594, in get_employee_filter
+    )
+      
+AttributeError: 'dict' object has no attribute 'organization_id'
+
+2026-03-11 13:58:08,533 [ERROR] main: TOP LEVEL LIVE STATUS ERROR: Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 2952, in get_field_live_status
+    """Stub for PDF export."""
+                      ^^^^^^^^^
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 1594, in get_employee_filter
+    )
+      
+AttributeError: 'dict' object has no attribute 'organization_id'
+
+2026-03-11 13:58:10,609 [ERROR] main: TOP LEVEL LIVE STATUS ERROR: Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 2952, in get_field_live_status
+    """Stub for PDF export."""
+                      ^^^^^^^^^
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 1594, in get_employee_filter
+    )
+      
+AttributeError: 'dict' object has no attribute 'organization_id'
+
+2026-03-11 13:58:17,783 [ERROR] main: TOP LEVEL LIVE STATUS ERROR: Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 2952, in get_field_live_status
+    """Stub for PDF export."""
+                      ^^^^^^^^^
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 1594, in get_employee_filter
+    )
+      
+AttributeError: 'dict' object has no attribute 'organization_id'
+
+2026-03-11 13:58:18,854 [ERROR] main: TOP LEVEL LIVE STATUS ERROR: Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 2952, in get_field_live_status
+    """Stub for PDF export."""
+                      ^^^^^^^^^
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 1594, in get_employee_filter
+    )
+      
+AttributeError: 'dict' object has no attribute 'organization_id'
+
+2026-03-11 13:58:20,936 [ERROR] main: TOP LEVEL LIVE STATUS ERROR: Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 2952, in get_field_live_status
+    """Stub for PDF export."""
+                      ^^^^^^^^^
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 1594, in get_employee_filter
+    )
+      
+AttributeError: 'dict' object has no attribute 'organization_id'
+
+2026-03-11 13:58:27,464 [ERROR] main: TOP LEVEL LIVE STATUS ERROR: Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 2952, in get_field_live_status
+    """Stub for PDF export."""
+                      ^^^^^^^^^
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 1594, in get_employee_filter
+    )
+      
+AttributeError: 'dict' object has no attribute 'organization_id'
+
+2026-03-11 13:58:28,544 [ERROR] main: TOP LEVEL LIVE STATUS ERROR: Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 2952, in get_field_live_status
+    """Stub for PDF export."""
+                      ^^^^^^^^^
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 1594, in get_employee_filter
+    )
+      
+AttributeError: 'dict' object has no attribute 'organization_id'
+
+2026-03-11 13:58:30,635 [ERROR] main: TOP LEVEL LIVE STATUS ERROR: Traceback (most recent call last):
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 2952, in get_field_live_status
+    """Stub for PDF export."""
+                      ^^^^^^^^^
+  File "C:\Users\BHASKAR JOSHI\OneDrive\Desktop\my project\attdence_app\backend\main.py", line 1594, in get_employee_filter
+    )
+      
+AttributeError: 'dict' object has no attribute 'organization_id'
+
+2026-03-11 16:36:32,874 [WARNING] tensorflow: From C:\Users\BHASKAR JOSHI\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-11 16:36:39,361 [INFO] apscheduler.scheduler: Scheduler started
+2026-03-11 16:36:39,363 [INFO] main: Scheduler started successfully.
+2026-03-11 16:36:39,363 [INFO] main: Application startup complete. ENV=development
+2026-03-11 16:36:40,179 [INFO] main: MongoDB Enterprise & GIS Indexes created successfully.
+2026-03-11 16:36:40,180 [INFO] main: APScheduler started: check_missed_visits scheduled hourly.
+2026-03-11 16:39:48,276 [INFO] main: Processing check-in for bhaskarjoshi918@gmail.com (Role: EmployeeType.DESK)
+2026-03-11 16:40:01,260 [WARNING] sheets_sync: Google Sheets sync skipped: GOOGLE_SHEET_ID or SERVICE_ACCOUNT_JSON_PATH not configured.
+2026-03-11 16:42:29,233 [INFO] main: Incoming login body: {"email":"desk@pro.com","password":"Desk@123"}
+2026-03-11 16:42:29,236 [INFO] main: --- Login attempt for 'desk@pro.com' ---
+2026-03-11 16:42:29,335 [INFO] main: User found in DB. Stored Org ID: 69a01f87346b7fcb4ef8a380
+2026-03-11 16:42:29,422 [INFO] main: Password verification successful.
+2026-03-11 16:42:29,422 [INFO] main: Organization match successful.
+2026-03-11 16:42:29,422 [INFO] main: Login process complete. Generating token.

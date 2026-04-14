@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Mystical Triangle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.jpg" />
+</head>
+<body>
+    <div class="App">
+        <header class="app-header">
+            <img src="logo.jpg" alt="Logo" class="app-logo">
+            <h1>Mystical Triangle</h1>
+            <p>Please login to continue</p>
+        </header>
+
+        <main class="app-main">
+            <div class="card login-card">
+                <form id="login-form">
+                    <div class="input-group">
+                        <label for="mobile">Mobile Number (ID)</label>
+                        <input type="text" id="mobile" placeholder="Enter Mobile Number" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter Password" required>
+                    </div>
+                    <button type="submit" class="generate-btn">Login</button>
+                    <div id="login-error" class="error-msg" style="display: none; margin-top: 1rem; color: #ff6b6b; text-align: center;"></div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

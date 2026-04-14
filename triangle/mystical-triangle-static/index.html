@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystical Triangle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.jpg" />
+    <link rel="apple-touch-icon" href="logo.jpg" />
+    <link rel="manifest" href="manifest.json" />
+</head>
+
+<body>
+    <div class="App">
+        <!-- HEADER -->
+        <header class="app-header">
+            <img src="logo.jpg" alt="Logo" class="app-logo">
+            <h1>Mystical Triangle</h1>
+            <p>Enter 3 dates to reveal the numerological pattern</p>
+        </header>
+
+        <main class="app-main">
+            <!-- INPUT FORM -->
+            <form id="triangle-form" class="date-input-form">
+                <div class="inputs-container">
+                    <div class="input-group">
+                        <label>Date 1</label>
+                        <input type="text" id="date1" placeholder="DD/MM/YYYY" maxlength="10">
+                        <span id="error1" class="error-msg"></span>
+                    </div>
+                    <div class="input-group">
+                        <label>Date 2 (Optional)</label>
+                        <input type="text" id="date2" placeholder="DD/MM/YYYY" maxlength="10">
+                        <span id="error2" class="error-msg"></span>
+                    </div>
+                    <div class="input-group">
+                        <label>Date 3 (Optional)</label>
+                        <input type="text" id="date3" placeholder="DD/MM/YYYY" maxlength="10">
+                        <span id="error3" class="error-msg"></span>
+                    </div>
+                </div>
+                <button type="submit" class="generate-btn">Generate Triangle</button>
+            </form>
+
+            <!-- ERROR BANNER -->
+            <div id="global-error" class="error-banner"></div>
+
+            <!-- LOADING -->
+            <div id="loading" class="loading-spinner">Analyzing numbers...</div>
+
+            <!-- RESULTS GRID (Hidden by default) -->
+            <div id="results-container" class="results-grid" style="display: none;">
+
+                <!-- TRIANGLE CARD -->
+                <div class="card triangle-card-container">
+                    <h3>Mystical Pattern</h3>
+                    <div class="mystic-grid">
+                        <!-- Row 1: A B C D -->
+                        <div class="row row-top">
+                            <div class="t-node std" title="A"><span id="val-A" class="val">-</span><span
+                                    class="lbl">A</span></div>
+                            <div class="t-node std" title="B"><span id="val-B" class="val">-</span><span
+                                    class="lbl">B</span></div>
+                            <div class="t-node std" title="C"><span id="val-C" class="val">-</span><span
+                                    class="lbl">C</span></div>
+                            <div class="t-node std" title="D"><span id="val-D" class="val">-</span><span
+                                    class="lbl">D</span></div>
+                        </div>
+
+                        <!-- Row 2: E F -->
+                        <div class="row row-upper-mid">
+                            <div class="t-node secondary" title="E"><span id="val-E" class="val">-</span><span
+                                    class="lbl">E</span></div>
+                            <div class="t-node secondary" title="F"><span id="val-F" class="val">-</span><span
+                                    class="lbl">F</span></div>
+                        </div>
+
+                        <!-- Row 3: G -->
+                        <div class="row row-center">
+                            <div class="t-node primary" title="G"><span id="val-G" class="val">-</span><span
+                                    class="lbl">G</span></div>
+                        </div>
+
+                        <!-- Row 4: Wings -->
+                        <div class="row row-wings">
+                            <div class="wing-left">
+                                <div class="t-node small" title="H"><span id="val-H" class="val">-</span><span
+                                        class="lbl">H</span></div>
+                                <div class="t-node small" title="I"><span id="val-I" class="val">-</span><span
+                                        class="lbl">I</span></div>
+                                <div class="t-node small" title="J"><span id="val-J" class="val">-</span><span
+                                        class="lbl">J</span></div>
+                            </div>
+                            <div class="wing-spacer"></div>
+                            <div class="wing-right">
+                                <div class="t-node small" title="K"><span id="val-K" class="val">-</span><span
+                                        class="lbl">K</span></div>
+                                <div class="t-node small" title="L"><span id="val-L" class="val">-</span><span
+                                        class="lbl">L</span></div>
+                                <div class="t-node small" title="M"><span id="val-M" class="val">-</span><span
+                                        class="lbl">M</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Row 5: N O -->
+                        <div class="row row-lower-mid">
+                            <div class="t-node secondary" title="N"><span id="val-N" class="val">-</span><span
+                                    class="lbl">N</span></div>
+                            <div class="t-node secondary" title="O"><span id="val-O" class="val">-</span><span
+                                    class="lbl">O</span></div>
+                        </div>
+
+                        <!-- Row 6: P -->
+                        <div class="row row-bottom-1">
+                            <div class="t-node primary" title="P"><span id="val-P" class="val">-</span><span
+                                    class="lbl">P</span></div>
+                        </div>
+
+                        <!-- Row 7: Q R -->
+                        <div class="row row-bottom-2">
+                            <div class="t-node std" title="Q"><span id="val-Q" class="val">-</span><span
+                                    class="lbl">Q</span></div>
+                            <div class="t-node std" title="R"><span id="val-R" class="val">-</span><span
+                                    class="lbl">R</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SIDE CARDS -->
+                <div class="side-cards">
+                    <!-- COUNTS CARD -->
+                    <div class="card counts-card">
+                        <h3>Counts</h3>
+                        <div class="counts-grid">
+                            <div class="count-item"><span class="count-label">1 & 6</span><span id="count-16"
+                                    class="count-val">0</span></div>
+                            <div class="count-item"><span class="count-label">2 & 7</span><span id="count-27"
+                                    class="count-val">0</span></div>
+                            <div class="count-item"><span class="count-label">3 & 8</span><span id="count-38"
+                                    class="count-val">0</span></div>
+                            <div class="count-item"><span class="count-label">4 & 9</span><span id="count-49"
+                                    class="count-val">0</span></div>
+                            <div class="count-item"><span class="count-label">5</span><span id="count-5"
+                                    class="count-val">0</span></div>
+                        </div>
+                    </div>
+
+                    <!-- EXTRAS CARD -->
+                    <div class="card extras-card">
+                        <h3>Extras</h3>
+                        <div class="extras-grid">
+                            <div class="extra-item">
+                                <span class="extra-label">E G N</span>
+                                <span id="val-EGN" class="extra-val param-seq"></span>
+                            </div>
+                            <div class="extra-item">
+                                <span class="extra-label">F G O</span>
+                                <span id="val-FGO" class="extra-val param-seq"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NOQR CARD -->
+                    <div class="card noqr-card">
+                        <h3>NOQR</h3>
+                        <div class="noqr-values">
+                            <div class="val-box"><span>N</span> <span id="noqr-N"></span></div>
+                            <div class="val-box"><span>O</span> <span id="noqr-O"></span></div>
+                            <div class="val-box"><span>Q</span> <span id="noqr-Q"></span></div>
+                            <div class="val-box"><span>R</span> <span id="noqr-R"></span></div>
+                        </div>
+                        <div id="has7-status" class="has7-status no">
+                            7 Present? <strong id="has7-text">NO</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

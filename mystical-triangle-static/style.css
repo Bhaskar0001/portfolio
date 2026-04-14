@@ -1,0 +1,565 @@
+/* =========================================
+   1. GLOBAL STYLES (from App.css)
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary: #6366f1;
+    --secondary: #ec4899;
+    --accent: #8b5cf6;
+    --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    --text-main: #1f2937;
+    --text-light: #6b7280;
+}
+
+body {
+    margin: 0;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: var(--bg-gradient);
+    color: var(--text-main);
+    min-height: 100vh;
+}
+
+.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    align-items: center;
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-logo {
+    height: 80px;
+    width: auto;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.app-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.app-header p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+.app-main {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Results Grid */
+.results-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    width: 100%;
+    animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.side-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Base Card Style - Glassmorphism */
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: var(--glass-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.2);
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-main);
+    border-bottom: 2px solid #f3f4f6;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Component Styles overrides/integrations */
+.counts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.count-item,
+.extra-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.count-label,
+.extra-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.count-val,
+.extra-val {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.extras-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.noqr-values {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.val-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #e0e7ff 0%, #eff6ff 100%);
+    padding: 10px 0;
+    border-radius: 10px;
+    color: #1e3a8a;
+    font-weight: 800;
+    font-size: 1.2rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.val-box span {
+    font-size: 0.7rem;
+    color: #60a5fa;
+    margin-bottom: 2px;
+    font-weight: 600;
+}
+
+.has7-status {
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.has7-status.yes {
+    background: #dcfce7;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+}
+
+.has7-status.no {
+    background: #f3f4f6;
+    color: #6b7280;
+    border: 1px solid #e5e7eb;
+}
+
+.error-banner {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 15px 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    font-weight: 500;
+    border: 1px solid #fecaca;
+    animation: shake 0.5s cubic-bezier(.36, .07, .19, .97) both;
+    display: none;
+    /* Hidden by default */
+}
+
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+.loading-spinner {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin: 40px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: none;
+    /* Hidden by default */
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.param-seq {
+    display: flex;
+    gap: 15px;
+    font-size: 1.4rem;
+}
+
+.param-seq span {
+    background: white;
+    padding: 0 8px;
+    border-radius: 4px;
+    border: 1px solid #c7d2fe;
+    color: #4338ca;
+    min-width: 24px;
+    text-align: center;
+}
+
+/* =========================================
+   2. DATE INPUT STYLES
+   ========================================= */
+.date-input-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    /* Ensure padding doesnt overflow width */
+}
+
+.inputs-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 150px;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #6366f1;
+    outline: none;
+}
+
+.input-group input.error {
+    border-color: #ef4444;
+}
+
+.error-msg {
+    color: #ef4444;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    height: 1.2em;
+    /* Reserve height */
+}
+
+.generate-btn {
+    background: #6366f1;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.generate-btn:hover {
+    background: #4f46e5;
+}
+
+
+/* =========================================
+   3. TRIANGLE CARD STYLES
+   ========================================= */
+.triangle-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mystic-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Specific Row Spacing */
+.row-top {
+    gap: 15px;
+}
+
+.row-upper-mid {
+    gap: 80px;
+}
+
+.row-center {
+    margin: 10px 0;
+}
+
+.row-wings {
+    align-items: center;
+    gap: 30px;
+    margin: 10px 0 20px 0;
+    position: relative;
+}
+
+.row-lower-mid {
+    gap: 15px;
+}
+
+.row-bottom-1 {
+    margin: 0;
+}
+
+.row-bottom-2 {
+    gap: 15px;
+}
+
+/* Wing Groups */
+.wing-left,
+.wing-right {
+    display: flex;
+    gap: 10px;
+}
+
+.wing-spacer {
+    width: 60px;
+    height: 4px;
+    background: #e5e7eb;
+    border-radius: 2px;
+}
+
+/* Node Styling */
+.t-node {
+    width: 50px;
+    height: 60px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+    font-family: 'Outfit', sans-serif;
+    cursor: default;
+}
+
+.t-node:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    border-color: #6366f1;
+    z-index: 10;
+}
+
+/* Value text */
+.t-node .val {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+/* Label text (tooltip/tiny) */
+.t-node .lbl {
+    position: absolute;
+    top: -18px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #9ca3af;
+    text-transform: uppercase;
+    background: white;
+    padding: 0 4px;
+}
+
+/* Variations */
+.t-node.primary {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    border: none;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.t-node.primary .val {
+    color: white;
+}
+
+.t-node.secondary {
+    border-color: #6366f1;
+    background: #eef2ff;
+}
+
+.t-node.secondary .val {
+    color: #4f46e5;
+}
+
+.t-node.small {
+    width: 40px;
+    height: 50px;
+}
+
+.t-node.small .val {
+    font-size: 1.2rem;
+}
+
+/* Responsive Scaling */
+@media (max-width: 600px) {
+    .t-node {
+        width: 40px;
+        height: 50px;
+    }
+
+    .t-node .val {
+        font-size: 1.2rem;
+    }
+
+    .row-wings {
+        gap: 10px;
+    }
+
+    .wing-spacer {
+        width: 30px;
+    }
+
+    .row-upper-mid {
+        gap: 40px;
+    }
+}
+
+/* =========================================
+   4. LOGIN PAGE STYLES
+   ========================================= */
+.login-card {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.login-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Shake animation for error */
+.shake {
+    animation: shake 0.5s cubic-bezier(.36, .07, .19, .97) both;
+}

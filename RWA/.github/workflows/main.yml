@@ -1,0 +1,31 @@
+name: SocietyOS CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.x'
+
+    - name: Install Backend Deps
+      run: npm install
+
+    - name: Install Frontend Deps
+      run: cd client && npm install
+
+    - name: Build Frontend
+      run: cd client && npm run build
+
+    - name: Run Backend Tests
+      run: npm test || true # Placeholder until tests are added
